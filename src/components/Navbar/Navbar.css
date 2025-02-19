@@ -1,0 +1,7 @@
+.navbar-start {
+    @apply w-3/4
+}
+
+.navbar-end {
+    @apply w-1/4;
+}
