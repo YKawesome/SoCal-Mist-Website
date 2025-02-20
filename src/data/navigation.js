@@ -31,10 +31,10 @@ export const navigationData = [
         name: "Competitions",
         url: "/competitions",
       },
-      {
-        name: "Programs",
-        url: "/programs",
-      },
+      // {
+      //   name: "Programs",
+      //   url: "/programs",
+      // },
     ],
   },
   {
@@ -48,10 +48,10 @@ export const navigationData = [
         name: "Volunteer",
         url: "/volunteer",
       },
-      {
-        name: "E-Board Application",
-        url: "/eboardapp",
-      },
+      // {
+      //   name: "E-Board Application",
+      //   url: "/eboardapp",
+      // },
     ],
   },
   {

@@ -12,6 +12,8 @@ import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
 import Board from "./pages/Board/Board";
+import Donate from "./pages/Donate/Donate";
+import Sponsor from "./pages/Sponsor/Sponsor";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -55,6 +57,11 @@ function App() {
         {/* Get Involved */}
         <Route path="/judge" element={<Judge />} />
         <Route path="/volunteer" element={<Volunteer />} />
+
+        {/* Donate */}
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/sponsor" element={<Sponsor />} />
+
       </Routes>
       <Footer />
     </HashRouter>
