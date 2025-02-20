@@ -1,11 +1,12 @@
 import mistLogo from "../../assets/images/socal-mist-big.png";
-import bg from "../../assets/images/background2024.jpg";
+import images from "../../utils/preloadimages";
 import "./Home.css"
 
 function Front() {
+  const bg = images["background2024.jpg"];
   return (
     <div
-      class="hero h-[92vh]"
+      className="hero h-[92vh]"
       style={{
         backgroundImage: `url(${bg})`,
       }}

@@ -1,8 +1,10 @@
-import instaLogo from "../../assets/icons/instagram.svg";
-import tiktokLogo from "../../assets/icons/tiktok.svg";
-import mistLogo from "../../assets/icons/socal-mist-logo.png";
+import images from "../../utils/preloadimages";
 
 function Footer() {
+  const mistLogo = images["socal-mist-logo.png"];
+  const instaLogo = images["instagram.svg"];
+  const tiktokLogo = images["tiktok.svg"];
+
   return (
     <footer className="footer footer-horizontal footer-center bg-base-300 text-base-content p-10">
       <aside>

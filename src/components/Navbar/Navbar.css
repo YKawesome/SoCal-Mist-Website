@@ -1,7 +1,7 @@
 .navbar-start {
-    @apply w-3/4
+    width: 95%;
 }
 
 .navbar-end {
-    @apply w-1/4;
+    width: 5%;
 }

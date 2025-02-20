@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import images from "../../utils/preloadimages";
 import "./Navbar.css";
-import instaLogo from "../../assets/icons/instagram.svg";
-import tiktokLogo from "../../assets/icons/tiktok.svg";
-import mistLogo from "../../assets/icons/socal-mist-logo.png";
+import LargeNav from "./Navs/LargeNav";
+import SmallNav from "./Navs/SmallNav";
 
 function Navbar() {
+  const instaLogo = images["instagram.svg"];
+  const mistLogo = images["socal-mist-logo.png"];
+  const tiktokLogo = images["tiktok.svg"];
+
   useEffect(() => {
     // Get all <details> elements
     const detailsElements = document.querySelectorAll("details");
@@ -45,13 +50,14 @@ function Navbar() {
 
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm h-20 z-20">
+      <div className="navbar bg-neutral text-neutral-content shadow-sm h-20 z-20">
         <div className="navbar-start">
-          <div tabIndex={0} role="button" className="btn btn-ghost">
-            <div className="w-18">
-              <img src={mistLogo} alt="SoCal MIST Logo" />
-            </div>
-          </div>
+            <Link to="/" className="px-3">
+              <div className="w-18">
+                <img src={mistLogo} alt="SoCal MIST Logo" />
+              </div>
+            </Link>
+
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -69,117 +75,15 @@ function Navbar() {
                 />
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
-            </ul>
+            <SmallNav />
           </div>
-          <a className="btn btn-ghost text-xl">SoCal MIST</a>
+          {/* <Link className="btn btn-ghost text-xl" to="/">SoCal MIST</Link> */}
           <div className="hidden lg:flex">
-            <ul className="menu menu-lg menu-horizontal px-1">
-              <li>
-                <details>
-                  <summary>About</summary>
-                  <ul className="p-2 w-max">
-                    <li>
-                      <a>About MIST</a>
-                    </li>
-                    <li>
-                      <a>Meet the Board</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details>
-                  <summary>SoCal MIST 2025</summary>
-                  <ul className="p-2 w-max">
-                    <li>
-                      <a>Registration</a>
-                    </li>
-                    <li>
-                      <a>Theme</a>
-                    </li>
-                    <li>
-                      <a>Rulebook</a>
-                    </li>
-                    <li>
-                      <a>Competitions</a>
-                    </li>
-                    <li>
-                      <a>Programs</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details>
-                  <summary>Get Involved</summary>
-                  <ul className="p-2 w-max">
-                    <li>
-                      <a>Judge</a>
-                    </li>
-                    <li>
-                      <a>Volunteer</a>
-                    </li>
-                    <li>
-                      <a>E-Board Application</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details>
-                  <summary>Past Years</summary>
-                  <ul className="p-2 w-max">
-                    <li>
-                      <a>2023</a>
-                    </li>
-                    <li>
-                      <a>2024</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details>
-                  <summary>Donate</summary>
-                  <ul className="p-2 w-max">
-                    <li>
-                      <a>Donate</a>
-                    </li>
-                    <li>
-                      <a>Sponsor</a>
-                    </li>
-                    <li>
-                      <a>E-Board Application</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
+            <LargeNav />
           </div>
         </div>
 
-        <div className="navbar-end gap-2">
+        <div className="navbar-end gap-2 hidden lg:flex text-neutral-content invert">
           <a className="btn btn-ghost btn-square">
             <img className="w-8" src={instaLogo} alt="Instagram Logo" />
           </a>
