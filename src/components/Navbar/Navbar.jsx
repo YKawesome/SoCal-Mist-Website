@@ -52,13 +52,28 @@ function Navbar() {
     <>
       <div className="navbar bg-neutral text-neutral-content shadow-sm h-20 z-20">
         <div className="navbar-start">
-            <Link to="/" className="px-3">
-              <div className="w-18">
-                <img src={mistLogo} alt="SoCal MIST Logo" />
-              </div>
-            </Link>
+          <Link to="/" className="px-3">
+            <div className="w-18">
+              <img src={mistLogo} alt="SoCal MIST Logo" />
+            </div>
+          </Link>
+          {/* <Link className="btn btn-ghost text-xl" to="/">SoCal MIST</Link> */}
+          <div className="hidden lg:flex">
+            <LargeNav />
+          </div>
+        </div>
 
-          <div className="dropdown">
+        <div className="navbar-end">
+          <div className="gap-2 hidden lg:flex text-neutral-content invert">
+            <a className="btn btn-ghost btn-square">
+              <img className="w-8" src={instaLogo} alt="Instagram Logo" />
+            </a>
+            <a className="btn btn-ghost btn-square">
+              <img className="w-8" src={tiktokLogo} alt="TikTok Logo" />
+            </a>
+
+          </div>
+          <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,19 +92,6 @@ function Navbar() {
             </div>
             <SmallNav />
           </div>
-          {/* <Link className="btn btn-ghost text-xl" to="/">SoCal MIST</Link> */}
-          <div className="hidden lg:flex">
-            <LargeNav />
-          </div>
-        </div>
-
-        <div className="navbar-end gap-2 hidden lg:flex text-neutral-content invert">
-          <a className="btn btn-ghost btn-square">
-            <img className="w-8" src={instaLogo} alt="Instagram Logo" />
-          </a>
-          <a className="btn btn-ghost btn-square">
-            <img className="w-8" src={tiktokLogo} alt="TikTok Logo" />
-          </a>
         </div>
       </div>
     </>

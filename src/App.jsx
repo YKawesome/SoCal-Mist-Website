@@ -6,6 +6,10 @@ import Footer from "./components/Footer/Footer";
 import { preloadImages } from "./utils/preloadimages";
 import { useState, useEffect } from "react";
 import About from "./pages/About/About";
+import Registration from "./pages/Registration/Registration";
+import Theme from "./pages/Theme/Theme";
+import Judge from "./pages/Judge/Judge";
+import Volunteer from "./pages/Volunteer/Volunteer";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +37,14 @@ function App() {
         {/* About */}
         <Route path="/about" element={<About />} />
         <Route path="/board" element={<h1>Board</h1>} />
+
+        {/* SoCal MIST 2025 */}
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/theme" element={<Theme />} />
+
+        {/* Get Involved */}
+        <Route path="/judge" element={<Judge />} />
+        <Route path="/volunteer" element={<Volunteer />} />
       </Routes>
       <Footer />
     </HashRouter>

@@ -19,16 +19,11 @@ function Front() {
           <img
             src={mistLogo}
             alt="SoCal MIST Logo"
-            className="w-100 self-center"
+            className="w-lg self-center p-8 rounded-box"
           />
-          <div className="h-[45vh]"></div>
-          <div className="max-w-md">
-            {/* <h1 className="mb-5 text-5xl font-bold">Hello there</h1> */}
-            {/* <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-                excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-                a id nisi.
-              </p> */}
+          <div className="h-[37vh]"></div>
+          <div className="max-w-md self-center">
+
             <button className="btn btn-primary w-60 h-20 text-2xl">
               Get Started
             </button>
