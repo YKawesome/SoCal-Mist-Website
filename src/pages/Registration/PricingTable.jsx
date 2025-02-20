@@ -12,9 +12,9 @@ function PricingTable() {
                             <th>Guest Price</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-base-100">
                         {/* row 1 */}
-                        <tr className="bg-base-200">
+                        <tr className="bg-yellow-100">
                             <th>Early Registration</th>
                             <td>March 8th</td>
                             <td>$40</td>
