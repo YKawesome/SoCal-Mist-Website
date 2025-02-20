@@ -11,6 +11,7 @@ import Registration from "./pages/Registration/Registration";
 import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
+import Board from "./pages/Board/Board";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +23,7 @@ function App() {
       } catch (error) {
         console.error("Error preloading images:", error);
       }
-      
+
       setLoading(false); // Set loading to false after images are preloaded
     };
 
@@ -45,7 +46,7 @@ function App() {
 
         {/* About */}
         <Route path="/about" element={<About />} />
-        <Route path="/board" element={<h1>Board</h1>} />
+        <Route path="/board" element={<Board />} />
 
         {/* SoCal MIST 2025 */}
         <Route path="/registration" element={<Registration />} />
