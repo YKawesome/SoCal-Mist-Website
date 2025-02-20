@@ -1,15 +1,16 @@
+import { useEffect, useState } from "react";
+import { Sugar } from "react-preloaders";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { preloadImages } from "./utils/preloadimages";
-import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
+import Home from "./pages/Home/Home";
+import Judge from "./pages/Judge/Judge";
 import Registration from "./pages/Registration/Registration";
 import Theme from "./pages/Theme/Theme";
-import Judge from "./pages/Judge/Judge";
 import Volunteer from "./pages/Volunteer/Volunteer";
+import { preloadImages } from "./utils/preloadimages";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
       } catch (error) {
         console.error("Error preloading images:", error);
       }
+      
       setLoading(false); // Set loading to false after images are preloaded
     };
 
@@ -29,6 +31,13 @@ function App() {
 
   return (
     <HashRouter>
+
+      <Sugar
+        customLoading={loading}
+        background="var(--color-neutral)"
+        color="var(--color-primary)"
+      />
+
       <Navbar />
       <Routes>
         {/* Home */}
