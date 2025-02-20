@@ -25,7 +25,7 @@ export const navigationData = [
       },
       {
         name: "Rulebook",
-        url: "/rulebook",
+        url: "https://www.getmistified.com/news/2024/11/20/2025-competitions-rulebook",
       },
       {
         name: "Competitions",

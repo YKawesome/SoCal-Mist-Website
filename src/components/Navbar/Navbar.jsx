@@ -6,9 +6,11 @@ import LargeNav from "./Navs/LargeNav";
 import SmallNav from "./Navs/SmallNav";
 
 function Navbar() {
-  const instaLogo = images["instagram.svg"];
   const mistLogo = images["socal-mist-logo.png"];
+  const instaLogo = images["instagram.svg"];
   const tiktokLogo = images["tiktok.svg"];
+  const emailLogo = images["email.svg"];
+  const threadsLogo = images["threads.svg"];
 
   useEffect(() => {
     // Get all <details> elements
@@ -65,11 +67,17 @@ function Navbar() {
 
         <div className="navbar-end">
           <div className="gap-2 hidden lg:flex text-neutral-content invert">
-            <a className="btn btn-ghost btn-square">
+            <a className="btn btn-ghost btn-square" href="https://www.instagram.com/socalmist/" target="_blank">
               <img className="w-8" src={instaLogo} alt="Instagram Logo" />
             </a>
             <a className="btn btn-ghost btn-square">
               <img className="w-8" src={tiktokLogo} alt="TikTok Logo" />
+            </a>
+            <a className="btn btn-ghost btn-square" href="mailto:socal@getmistified.com" target="_blank">
+              <img className="w-8" src={emailLogo} alt="Instagram Logo" />
+            </a>
+            <a className="btn btn-ghost btn-square" href="https://www.threads.net/@socalmist" target="_blank">
+              <img className="w-8" src={threadsLogo} alt="Threads Logo" />
             </a>
 
           </div>

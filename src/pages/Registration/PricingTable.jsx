@@ -16,21 +16,21 @@ function PricingTable() {
                         {/* row 1 */}
                         <tr className="bg-base-200">
                             <th>Early Registration</th>
-                            <td>March 15th</td>
-                            <td>$35</td>
-                            <td>$35</td>
+                            <td>March 8th</td>
+                            <td>$40</td>
+                            <td>$30</td>
                         </tr>
                         {/* row 2 */}
                         <tr>
-                        <th>Early Registration</th>
-                            <td>March 30th</td>
+                        <th>General Registration</th>
+                            <td>March 23rd</td>
                             <td>$50</td>
                             <td>$40</td>
                         </tr>
                         {/* row 3 */}
                         <tr>
                         <th>Late Registration</th>
-                            <td>March 1th</td>
+                            <td>March 28th</td>
                             <td>$60</td>
                             <td>$50</td>
                         </tr>
