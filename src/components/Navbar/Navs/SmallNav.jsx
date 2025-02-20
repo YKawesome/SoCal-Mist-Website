@@ -15,7 +15,7 @@ function SmallNav() {
               <ul className="p-2">
                 {menuItem.subMenu.map((subItem, subIndex) => (
                   <li key={subIndex}>
-                    <a href={subItem.url}>{subItem.name}</a>
+                    <Link to={subItem.url}>{subItem.name}</Link>
                   </li>
                 ))}
               </ul>
