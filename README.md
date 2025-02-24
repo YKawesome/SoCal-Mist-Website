@@ -57,14 +57,14 @@ To build an optimized version of the site:
   ```
 This command generates the production-ready files in the dist directory.
 ## Deployment
-The site is deployed to GitHub Pages. A common approach is to use the gh-pages package. Add these scripts to your package.json:
+The site is deployed to GitHub Pages. The following scripts have been added to package.json.
   ```json
     "scripts": {
       "predeploy": "npm run build",
       "deploy": "gh-pages -d dist"
     }
   ```
-Then, deploy the site with:
+You can then deploy the site with:
   ```bash
     npm run deploy
   ```
