@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function OurTeam() {
     return (
         <>
@@ -8,7 +10,7 @@ function OurTeam() {
                         <p className="py-6 lg:text-lg text-base">
                             Meet the heart and soul behind MIST—our dedicated team of organizers and volunteers. Each member brings a unique blend of passion and expertise, driving our mission forward with innovation and commitment. Together, we create dynamic experiences that empower students, celebrate achievements, and inspire a legacy of excellence in the Muslim community. Get to know the faces that make MIST a beacon of inspiration and a hub of inter-scholastic triumph.
                         </p>
-                        <button className="btn btn-xl btn-secondary">Meet the Team</button>
+                        <Link to="/board" className="btn btn-xl btn-secondary">Meet the Team</Link>
                     </div>
                 </div>
             </div>

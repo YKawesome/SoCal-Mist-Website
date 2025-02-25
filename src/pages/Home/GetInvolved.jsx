@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function GetInvolved() {
     return (
         <>
@@ -6,8 +8,8 @@ function GetInvolved() {
                     <div className="max-w-xl">
                         <h1 className="lg:text-7xl text-6xl font-bold mb-8">Get Involved</h1>
                         <div className="join">
-                            <a className="btn btn-xl btn-secondary join-item">Judge</a>
-                            <a className="btn btn-xl btn-secondary join-item">Volunteer</a>
+                            <Link to="/judge" className="btn btn-xl btn-secondary join-item">Judge</Link>
+                            <Link to="/volunteer" className="btn btn-xl btn-secondary join-item">Volunteer</Link>
                         </div>
                     </div>
                 </div>

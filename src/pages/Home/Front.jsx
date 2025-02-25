@@ -1,6 +1,7 @@
 import mistLogo from "../../assets/images/socal-mist-big.png";
 import images from "../../utils/preloadimages";
 import "./Home.css"
+import { Link } from "react-router-dom";
 
 function Front() {
   const bg = images["background2024.jpg"];
@@ -11,22 +12,21 @@ function Front() {
         backgroundImage: `url(${bg})`,
       }}
     >
-      
+
       <div className="hero-overlay"></div>
       {/* <div className="fade-to-black"></div> */}
-      <div className="hero-content text-neutral-content text-center">
-        <div className="flex flex-col">
+      <div className="hero-content text-neutral-content text-center h-full">
+        <div className="flex flex-col justify-between h-full">
           <img
             src={mistLogo}
             alt="SoCal MIST Logo"
             className="w-lg self-center p-8 rounded-box"
           />
-          <div className="h-[37vh]"></div>
-          <div className="max-w-md self-center">
+          <div className="max-w-md self-center mb-10">
 
-            <button className="btn btn-primary w-60 h-20 text-2xl">
-              Get Started
-            </button>
+            <Link to="/registration" className="btn btn-primary w-60 h-20 text-2xl">
+              Register Now!
+            </Link>
           </div>
         </div>
       </div>

@@ -70,10 +70,10 @@ export const navigationData = [
   {
     name: "Donate",
     subMenu: [
-      {
-        name: "Donate",
-        url: "/donate",
-      },
+      // {
+      //   name: "Donate",
+      //   url: "/donate",
+      // },
       {
         name: "Sponsor",
         url: "/sponsor",

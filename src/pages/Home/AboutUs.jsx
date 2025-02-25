@@ -1,4 +1,5 @@
 import images from "../../utils/preloadimages";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
     const aboutUsImage = images["aboutusimage.png"];
@@ -14,7 +15,7 @@ function AboutUs() {
                         <p className="py-6">
                             At MIST, we empower high school students through engaging competitions that fuse educational pursuits with Islamic values. Our vibrant community welcomes diverse talents to express themselves, innovate, and excel across a spectrum of disciplines. From fostering leadership and communication skills to inspiring a creative and collaborative spirit, MIST is dedicated to nurturing the next generation of thinkers, leaders, and change-makers. Join us on this transformative journey to celebrate knowledge, unity, and growth.
                         </p>
-                        <a className="btn btn-xl btn-base-200">Learn More</a>
+                        <Link to="about" className="btn btn-xl btn-base-200">Learn More</Link>
                     </div>
                 </div>
             </div>

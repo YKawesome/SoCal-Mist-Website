@@ -9,7 +9,7 @@ function Theme() {
                 <PageHeader title="Theme" />
             </div>
             <div
-                class="hero lg:h-[92vh] h-[50vh]"
+                className="hero lg:h-[92vh] h-[50vh]"
                 style={{
                     backgroundImage: `url(${themeImage})`,
                 }}>

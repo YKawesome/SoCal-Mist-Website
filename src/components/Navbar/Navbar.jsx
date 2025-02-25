@@ -6,7 +6,7 @@ import LargeNav from "./Navs/LargeNav";
 import SmallNav from "./Navs/SmallNav";
 
 function Navbar() {
-  const mistLogo = images["socal-mist-logo.png"];
+  const mistLogo = images["socal-mist-logo-white.png"];
   const instaLogo = images["instagram.svg"];
   const tiktokLogo = images["tiktok.svg"];
   const emailLogo = images["email.svg"];
