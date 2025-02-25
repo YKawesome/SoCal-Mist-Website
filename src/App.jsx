@@ -5,15 +5,16 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
+import Board from "./pages/Board/Board";
+import Donate from "./pages/Donate/Donate";
 import Home from "./pages/Home/Home";
 import Judge from "./pages/Judge/Judge";
 import Registration from "./pages/Registration/Registration";
+import Sponsor from "./pages/Sponsor/Sponsor";
 import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
-import Board from "./pages/Board/Board";
-import Donate from "./pages/Donate/Donate";
-import Sponsor from "./pages/Sponsor/Sponsor";
+import ScrollToTop from "./utils/scrolltotop";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,8 @@ function App() {
 
   return (
     <HashRouter>
+
+      <ScrollToTop />
 
       <Sugar
         customLoading={loading}

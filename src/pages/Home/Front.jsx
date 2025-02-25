@@ -17,11 +17,16 @@ function Front() {
       {/* <div className="fade-to-black"></div> */}
       <div className="hero-content text-neutral-content text-center h-full">
         <div className="flex flex-col justify-between h-full">
-          <img
-            src={mistLogo}
-            alt="SoCal MIST Logo"
-            className="w-lg self-center p-8 rounded-box"
-          />
+          <div>
+            <img
+              src={mistLogo}
+              alt="SoCal MIST Logo"
+              className="w-lg self-center p-8 rounded-box"
+            />
+            <h1 className="text-5xl font-bold bg-neutral w-fit place-self-center p-5 rounded-xl text-primary">
+              April 12-13
+            </h1>
+          </div>
           <div className="max-w-md self-center mb-10">
 
             <Link to="/registration" className="btn btn-primary w-60 h-20 text-2xl">
