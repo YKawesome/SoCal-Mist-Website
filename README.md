@@ -69,3 +69,5 @@ You can then deploy the site with:
     npm run deploy
   ```
 This will push the contents of the dist folder to the gh-pages branch on GitHub.
+
+Edit: `git push` will now auto-deploy!
