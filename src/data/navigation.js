@@ -27,14 +27,23 @@ export const navigationData = [
         name: "Rulebook",
         url: "https://www.getmistified.com/news/2024/11/20/2025-competitions-rulebook",
       },
-      {
-        name: "Competitions",
-        url: "/competitions",
-      },
       // {
       //   name: "Programs",
       //   url: "/programs",
       // },
+    ],
+  },
+  {
+    name: "Competitions",
+    subMenu: [
+      {
+        name: "Competitions",
+        url: "/competitions",
+      },
+      {
+        name: "Early Submissions",
+        url: "/early-submissions",
+      },
     ],
   },
   {

@@ -15,6 +15,7 @@ import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
 import ScrollToTop from "./utils/scrolltotop";
+import Competitions from "./pages/Competitions/Competitions";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -56,6 +57,9 @@ function App() {
         {/* SoCal MIST 2025 */}
         <Route path="/registration" element={<Registration />} />
         <Route path="/theme" element={<Theme />} />
+
+        {/* Competitions */}
+        <Route path="/competitions" element={<Competitions />} />
 
         {/* Get Involved */}
         <Route path="/judge" element={<Judge />} />
