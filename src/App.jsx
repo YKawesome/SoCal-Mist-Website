@@ -16,6 +16,7 @@ import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
 import ScrollToTop from "./utils/scrolltotop";
 import Competitions from "./pages/Competitions/Competitions";
+import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -60,6 +61,7 @@ function App() {
 
         {/* Competitions */}
         <Route path="/competitions" element={<Competitions />} />
+        <Route path="/early-submissions" element={<EarlySubmissions />} />
 
         {/* Get Involved */}
         <Route path="/judge" element={<Judge />} />

@@ -1,11 +1,7 @@
 function PageHeader({ title }) {
   return (
-    <div className="hero bg-primary text-primary-content h-[15vh]">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="lg:text-6xl text-5xl font-bold">{title}</h1>
-        </div>
-      </div>
+    <div className="bg-primary text-primary-content h-[12vh] flex items-center justify-center">
+      <h1 className="sm:text-6xl text-4xl font-bold text-center">{title}</h1>
     </div>
   );
 }
