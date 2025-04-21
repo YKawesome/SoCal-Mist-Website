@@ -16,7 +16,7 @@ function EarlySubmissions() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             {[
               "Prepared Essay - Submit your Prepared Essay",
               "Short Fiction - Submit Short Fiction piece and written statement",
@@ -29,8 +29,8 @@ function EarlySubmissions() {
               "Digital Art - Artwork (JPG, TIFF, or PNG), artist statement (500 words max), 2+ drafts",
               "Photography - Photography Portfolio, artist statement (500 words max)",
             ].map((item, index) => (
-              <div key={index} className="card bg-base-100 shadow-md">
-                <div className="card-body p-4 text-lg">
+              <div key={index} className="card bg-base-100 shadow-md transform transition duration-300 hover:scale-102 hover:bg-primary">
+                <div className="card-body p-4 text-lg ">
                   <p>{item}</p>
                 </div>
               </div>

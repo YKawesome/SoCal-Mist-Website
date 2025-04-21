@@ -23,8 +23,8 @@ function Front() {
               alt="SoCal MIST Logo"
               className="w-lg self-center p-8 rounded-box"
             />
-            <h1 className="text-5xl font-bold bg-neutral w-fit place-self-center p-7 rounded-xl text-primary">
-              April 26-27 @ ISOC
+            <h1 className="text-5xl font-bold glass shadow-2xl w-fit place-self-center p-7 rounded-xl text-primary">
+              June 28-29th @ ISOC
             </h1>
           </div>
           <div className="max-w-md self-center mb-10">

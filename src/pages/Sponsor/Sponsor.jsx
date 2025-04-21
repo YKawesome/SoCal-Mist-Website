@@ -4,7 +4,7 @@ function Sponsor() {
     return (
         <>
             <PageHeader title="Sponsor" />
-            <div className="hero bg-base-200 h-full p-6">
+            <div className="hero bg-base-200 h-[52vh] p-6">
                 <div className="hero-content text-center">
                     <div className="lg:max-w-lg max-w-md">
                         <h1 className="text-2xl font-bold">
