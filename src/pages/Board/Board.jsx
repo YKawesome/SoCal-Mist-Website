@@ -9,7 +9,7 @@ const Card = ({ member }) => {
     const imageSrc = images[imageKey];
 
     return (
-        <div className="card bg-base-100 shadow-md w-full">
+        <div className="card bg-base-100 shadow-lg w-full">
             <figure className="px-10 pt-10 pb-2 xs:pb-0">
                 {imageSrc ? (
                     <img

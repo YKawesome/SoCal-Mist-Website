@@ -22,7 +22,7 @@ function Registration() {
                 </div>
             </div>
             <div className="bg-base-100 h-full py-10 items-center">
-                <div className="card card-xl bg-base-200 lg:w-4xl sm:w-xl w-sm shadow-sm place-self-center">
+                <div className="card card-xl bg-base-200 lg:w-4xl sm:w-xl w-sm shadow-lg place-self-center">
                     <div className="card-body">
                         <h2 className="card-title pb-3">Pricing</h2>
                         <PricingTable />
