@@ -1,8 +1,15 @@
 # SoCal Mist Website
 
-SoCal Mist Website is a modern, responsive web application built with React and styled with TailwindCSS and DaisyUI. The project is bundled with Vite for fast development and build times and is deployed via GitHub Pages.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f7d3f8aa-a50c-4ef7-b6bd-c84f1388ca95" width="180" alt="SoCal Mist Logo" />
 
-## Table of Contents
+</p>
+
+<p align="center"><em>A modern, responsive website for SoCal MIST — built for speed, style, and usability.</em></p>
+
+---
+
+## 📌 Table of Contents
 
 - [Overview](#overview)
 - [Technologies Used](#technologies-used)
@@ -10,64 +17,94 @@ SoCal Mist Website is a modern, responsive web application built with React and 
 - [Usage](#usage)
 - [Deployment](#deployment)
 
-## Overview
+---
 
-This repository contains the source code for the SoCal Mist Website. The site showcases the unique offerings and style of SoCal Mist, featuring a dynamic user interface and a clean design. The project leverages modern front-end technologies to provide a fast and smooth user experience.
+## 🌐 Overview
 
-## Technologies Used
+This repository contains the source code for the **SoCal Mist Website**, built to represent the energy and creativity of the SoCal MIST tournament. It features a clean, dynamic UI with smooth animations and responsive design — ensuring participants and visitors enjoy a fast, accessible experience across devices.
 
-- **React:** A JavaScript library for building user interfaces.
-- **Vite:** A fast build tool that provides an extremely quick development experience.
-- **TailwindCSS:** A utility-first CSS framework for rapid UI development.
-- **DaisyUI:** A TailwindCSS component library that simplifies styling.
-- **GitHub Pages:** A free hosting service for deploying static websites.
+---
 
-## Installation
+## ⚙️ Technologies Used
+
+- **[React](https://reactjs.org/)** – Frontend library for building UI components
+- **[Vite](https://vitejs.dev/)** – Lightning-fast development environment and bundler
+- **[Tailwind CSS](https://tailwindcss.com/)** – Utility-first CSS framework
+- **[DaisyUI](https://daisyui.com/)** – Tailwind component library for styled components
+- **[GitHub Pages](https://pages.github.com/)** – Static site hosting
+- **[GitHub Actions](https://docs.github.com/en/actions)** – Automated deployment on push
+
+---
+
+## 📦 Installation
 
 1. **Clone the Repository**
 
-   ```bash
-   git clone https://github.com/your-username/SoCal-Mist-Website.git
-   cd SoCal-Mist-Website
-   ```
+```bash
+git clone https://github.com/your-username/SoCal-Mist-Website.git
+cd SoCal-Mist-Website
+```
+
 2. **Install Dependencies**
 
-    Using npm:
-    
-    ```bash
-     npm install
-     ```
-         
-    Or Yarn:
-    
-    ```bash
-     yarn
-     ```
-## Usage
-### Development
-To run the project locally in development mode with hot reloading:
-  ```bash
-  npm run dev
-  ```
-Then, open http://localhost:5173 in your browser.
-### Building For Production
-To build an optimized version of the site:
-  ```bash
-  npm run build
-  ```
-This command generates the production-ready files in the dist directory.
-## Deployment
-The site is deployed to GitHub Pages. The following scripts have been added to package.json.
-  ```json
-    "scripts": {
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d dist"
-    }
-  ```
-You can then deploy the site with:
-  ```bash
-    npm run deploy
-  ```
-This will push the contents of the dist folder to the gh-pages branch on GitHub.
+Using npm:
 
-Edit: `git push` will now auto-deploy!
+```bash
+npm install
+```
+
+Or with Yarn:
+
+```bash
+yarn
+```
+
+---
+
+## 🚧 Usage
+
+### Development
+
+Run the development server with hot reloading:
+
+```bash
+npm run dev
+```
+
+Then visit: [http://localhost:5173](http://localhost:5173)
+
+### Production Build
+
+To generate a production-ready build:
+
+```bash
+npm run build
+```
+
+This outputs the final files in the `dist/` directory.
+
+---
+
+## 🚀 Deployment
+
+This project uses GitHub Actions to deploy automatically to GitHub Pages on push.
+
+If you'd like to deploy manually, use:
+
+```bash
+npm run deploy
+```
+
+This will:
+- Build the site (`npm run build`)
+- Push the contents of the `dist` folder to the `gh-pages` branch
+
+> Deployment now happens automatically when you `git push` to `main`.
+
+---
+
+## 🪪 License
+
+MIT License © 2025 SoCal MIST Team
+
+---
