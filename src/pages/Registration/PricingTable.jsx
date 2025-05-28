@@ -14,14 +14,14 @@ function PricingTable() {
           </thead>
           <tbody className="bg-base-100">
             {/* row 1 */}
-            <tr className="bg-yellow-100">
+            <tr className="">
               <th>Early Registration</th>
               <td>May 10th</td>
               <td>$35</td>
               <td>$25</td>
             </tr>
             {/* row 2 */}
-            <tr>
+            <tr className="bg-yellow-100">
               <th>General Registration</th>
               <td>June 8th</td>
               <td>$45</td>
