@@ -6,6 +6,7 @@ import ImageRowTwo from "./ImageRowTwo";
 import MistTheme from "./MistTheme";
 import OurSponsors from "./OurSponsors";
 import OurTeam from "./OurTeam";
+import SignUp from "./SignUp";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <GetInvolved />
       <ImageRowTwo />
       <OurSponsors />
+      <SignUp />
     </>
   );
 }
