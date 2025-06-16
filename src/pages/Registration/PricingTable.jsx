@@ -21,13 +21,13 @@ function PricingTable() {
               <td>$25</td>
             </tr>
             {/* row 2 */}
-            <tr className="bg-yellow-100">
+            <tr className="">
               <th>General Registration</th>
               <td>June 8th</td>
               <td>$45</td>
               <td>$35</td>
             </tr>
-            <tr>
+            <tr className="bg-yellow-100">
               <th>Late Registration</th>
               <td>June 14th</td>
               <td>$55</td>
