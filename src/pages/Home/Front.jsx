@@ -23,15 +23,15 @@ function Front() {
               alt="SoCal MIST Logo"
               className="w-lg self-center p-8 rounded-box"
             />
-            <h1 className="text-5xl font-bold glass shadow-2xl w-fit place-self-center p-7 rounded-xl text-primary">
+            {/* <h1 className="text-5xl font-bold glass shadow-2xl w-fit place-self-center p-7 rounded-xl text-primary">
               June 28-29th @ ISOC
-            </h1>
+            </h1> */}
           </div>
           <div className="max-w-md self-center mb-10">
 
-            <Link to="/registration" className="btn btn-primary w-60 h-20 text-2xl">
+            {/* <Link to="/registration" className="btn btn-primary w-60 h-20 text-2xl">
               Register Now!
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
