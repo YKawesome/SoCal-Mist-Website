@@ -65,7 +65,7 @@ function Navbar() {
           </div>
         </div>
 
-        <div className="navbar-end">
+        <div className="">
           <div className="gap-2 hidden lg:flex text-neutral-content invert">
             <a className="btn btn-ghost btn-square" href="https://www.instagram.com/socalmist/" target="_blank">
               <img className="w-8" src={instaLogo} alt="Instagram Logo" />
@@ -80,26 +80,36 @@ function Navbar() {
               <img className="w-8" src={threadsLogo} alt="Threads Logo" />
             </a>
 
+            
+
           </div>
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+
+          <div className="drawer drawer-end lg:hidden">
+            <input id="mobile-nav-drawer" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+              <label htmlFor="mobile-nav-drawer" className="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </label>
             </div>
-            <SmallNav />
+            <div className="drawer-side z-20">
+              <label htmlFor="mobile-nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+              <SmallNav />
+            </div>
           </div>
+          
         </div>
       </div>
     </>

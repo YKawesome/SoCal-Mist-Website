@@ -6,7 +6,9 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./pages/About/About";
 import Board from "./pages/Board/Board";
+import Competitions from "./pages/Competitions/Competitions";
 import Donate from "./pages/Donate/Donate";
+import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
 import Home from "./pages/Home/Home";
 import Judge from "./pages/Judge/Judge";
 import Registration from "./pages/Registration/Registration";
@@ -15,8 +17,6 @@ import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import { preloadImages } from "./utils/preloadimages";
 import ScrollToTop from "./utils/scrolltotop";
-import Competitions from "./pages/Competitions/Competitions";
-import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
 
 function App() {
   const [loading, setLoading] = useState(true);

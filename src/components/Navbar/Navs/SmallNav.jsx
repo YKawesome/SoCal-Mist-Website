@@ -2,26 +2,34 @@ import { navigationData } from "../../../data/navigation";
 import { Link } from "react-router-dom";
 
 function SmallNav() {
+  const closeDrawer = () => {
+    const checkbox = document.getElementById("mobile-nav-drawer");
+    if (checkbox && "checked" in checkbox) {
+      checkbox.checked = false;
+    }
+  };
+
   return (
-    <ul
-      tabIndex={0}
-      className="menu menu-sm dropdown-content bg-neutral text-neutral-content rounded-box z-1 mt-3 w-52 p-2 shadow"
-    >
+    <ul className="menu bg-neutral text-neutral-content min-h-full w-80 p-4">
       {navigationData.map((menuItem, index) => (
         <li key={index}>
           {menuItem.subMenu ? (
             <>
-              <a>{menuItem.name}</a>
-              <ul className="p-2">
+              <span className="menu-title text-neutral-content opacity-70">{menuItem.name}</span>
+              <ul className="p-0 pl-2">
                 {menuItem.subMenu.map((subItem, subIndex) => (
-                  <li key={subIndex}>
-                    <Link to={subItem.url}>{subItem.name}</Link>
+                  <li key={subIndex} className="">
+                    <Link to={subItem.url} onClick={closeDrawer}>
+                      {subItem.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </>
           ) : (
-            <a href={menuItem.url}>{menuItem.name}</a>
+            <a href={menuItem.url} onClick={closeDrawer}>
+              {menuItem.name}
+            </a>
           )}
         </li>
       ))}

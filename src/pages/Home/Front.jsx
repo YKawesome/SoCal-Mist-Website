@@ -17,21 +17,27 @@ function Front() {
       {/* <div className="fade-to-black"></div> */}
       <div className="hero-content text-neutral-content text-center h-full">
         <div className="flex flex-col justify-between h-full">
-          <div>
+          <div className="justify-items-center">
             <img
               src={mistLogo}
               alt="SoCal MIST Logo"
-              className="w-lg self-center p-8 rounded-box"
+              className="w-lg p-8 rounded-box"
             />
-            {/* <h1 className="text-5xl font-bold glass shadow-2xl w-fit place-self-center p-7 rounded-xl text-primary">
-              June 28-29th @ ISOC
-            </h1> */}
+            <h1 className="text-5xl font-bold glass shadow-2xl w-fit place-self-center p-7 rounded-xl text-primary">
+              E-BOARD APPS OPEN!
+            </h1>
           </div>
           <div className="max-w-md self-center mb-10">
 
             {/* <Link to="/registration" className="btn btn-primary w-60 h-20 text-2xl">
-              Register Now!
+              Apply Now!
             </Link> */}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdkdf4WyBwZsI_JoMWLns6jA-AdLqeM5deyRgOm59lZmQWK0w/viewform?usp=sharing&ouid=112521987942771006926"
+            className="btn btn-primary w-60 h-20 text-2xl"
+            target="_blank"
+            >
+              Apply Now!
+            </a>
           </div>
         </div>
       </div>
