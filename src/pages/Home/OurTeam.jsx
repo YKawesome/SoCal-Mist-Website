@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 export default function OurTeam() {
   return (
-    <section className="py-15 bg-base-100 flex flex-col gap-8">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto">
+    <section className="flex flex-col py-15 bg-base-100 gap-8">
+      <div className="container px-6 mx-auto">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.h2 
-            className="text-5xl font-bold mb-6 text-primary"
+            className="mb-6 text-5xl font-bold text-primary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function OurTeam() {
           </motion.p>
         </div>
       </div>
-      <button className="btn btn-primary btn-lg block mx-auto">Meet the Team</button>
+      <button className="block mx-auto btn btn-primary btn-lg">Meet the Team</button>
     </section>
   );
 }

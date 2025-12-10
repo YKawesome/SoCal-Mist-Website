@@ -15,20 +15,20 @@ export default function Landing() {
   const arrowOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
-    <div ref={ref} className="hero min-h-screen overflow-hidden relative">
+    <div ref={ref} className="relative min-h-screen overflow-hidden hero">
       <motion.div
         className="absolute inset-0 w-full h-full"
         style={{ y: backgroundY }}
       >
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url(${bg})` }}
         />
         <div className="absolute inset-0 bg-black/60" />
       </motion.div>
 
       <motion.div
-        className="hero-content text-center text-neutral-content relative z-10"
+        className="relative z-10 text-center hero-content text-neutral-content"
         style={{ y: textY }}
       >
         <div className="max-w-md">
@@ -62,8 +62,8 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="btn btn-lg btn-primary mr-4">Get Started</button>
-            <button className="btn btn-lg btn-outline btn-secondary text-white">
+            <button className="mr-4 btn btn-lg btn-primary">Get Started</button>
+            <button className="text-white btn btn-lg btn-outline btn-secondary">
               Learn More
             </button>
           </motion.div>
@@ -72,14 +72,14 @@ export default function Landing() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white"
+        className="absolute text-white bottom-10 left-1/2 -translate-x-1/2"
         style={{ opacity: arrowOpacity }}
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 1.5 }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-10 w-10"
+          className="w-10 h-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

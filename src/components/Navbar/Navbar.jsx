@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4 pointer-events-none">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 pointer-events-none">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ 
@@ -55,7 +55,7 @@ export default function Navbar() {
               <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="w-5 h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -113,15 +113,15 @@ export default function Navbar() {
               </ul>
             </div>
             
-            <Link to="/" className="btn btn-ghost text-xl gap-2 hover:bg-transparent">
-              <img src={logo} alt="MIST Logo" className="h-8 w-auto" />
-              <span className="hidden sm:inline font-bold">SoCal MIST</span>
+            <Link to="/" className="text-xl btn btn-ghost gap-2 hover:bg-transparent">
+              <img src={logo} alt="MIST Logo" className="w-auto h-8" />
+              <span className="hidden font-bold sm:inline">SoCal MIST</span>
             </Link>
           </div>
 
           {/* Desktop Menu */}
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 gap-1">
+          <div className="hidden navbar-center lg:flex">
+            <ul className="px-1 menu menu-horizontal gap-1">
               {navigationData.map((item, index) => (
                 <li key={index}>
                   {item.subMenu ? (
@@ -139,7 +139,7 @@ export default function Navbar() {
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-ghost btn-sm font-medium"
+                        className="font-medium btn btn-ghost btn-sm"
                         onMouseEnter={() => setActiveMenu(null)}
                       >
                         {item.name}
@@ -147,7 +147,7 @@ export default function Navbar() {
                     ) : (
                       <Link 
                         to={item.url} 
-                        className="btn btn-ghost btn-sm font-medium"
+                        className="font-medium btn btn-ghost btn-sm"
                         onMouseEnter={() => setActiveMenu(null)}
                       >
                         {item.name}
@@ -164,7 +164,7 @@ export default function Navbar() {
               href="https://my.getmistified.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-sm shadow-md hover:scale-105 transition-transform rounded-full px-6"
+              className="px-6 rounded-full shadow-md btn btn-primary btn-sm hover:scale-105 transition-transform"
             >
               Register
             </a>
@@ -179,10 +179,10 @@ export default function Navbar() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="bg-base-200/50 border-t border-base-content/5 overflow-hidden"
+              className="overflow-hidden border-t bg-base-200/50 border-base-content/5"
             >
-              <div className="p-6 flex justify-center">
-                <div className="flex flex-wrap justify-center gap-4 max-w-3xl">
+              <div className="flex justify-center p-6">
+                <div className="flex flex-wrap justify-center max-w-3xl gap-4">
                   {navigationData
                     .find((item) => item.name === activeMenu)
                     ?.subMenu.map((subItem, subIndex) => (
@@ -197,7 +197,7 @@ export default function Navbar() {
                             href={subItem.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-ghost h-auto py-3 px-6 text-center text-xl font-bold hover:bg-base-100 hover:shadow-sm"
+                            className="h-auto px-6 py-3 text-xl font-bold text-center btn btn-ghost hover:bg-base-100 hover:shadow-sm"
                             onClick={() => setActiveMenu(null)}
                           >
                             {subItem.name}
@@ -205,7 +205,7 @@ export default function Navbar() {
                         ) : (
                           <Link
                             to={subItem.url}
-                            className="btn btn-primary btn-ghost btn-xl font-bold"
+                            className="font-bold btn btn-primary btn-ghost btn-xl"
                             onClick={() => setActiveMenu(null)}
                           >
                             {subItem.name}

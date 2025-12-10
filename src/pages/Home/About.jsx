@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="hero bg-base-200 py-20 overflow-hidden">
-      <div className="hero-content flex-col lg:flex-row gap-12 max-w-6xl mx-auto px-6">
+    <div className="py-20 overflow-hidden hero bg-base-200">
+      <div className="flex-col max-w-6xl px-6 mx-auto hero-content lg:flex-row gap-12">
         <motion.img
           src={aboutImage}
           alt="About MIST SoCal"
-          className="max-w-md w-full rounded-lg shadow-2xl"
+          className="w-full max-w-md rounded-lg shadow-2xl"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -20,8 +20,8 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl font-bold mb-6 text-primary">About Us</h2>
-          <p className="text-lg leading-relaxed mb-4">
+          <h2 className="mb-6 text-5xl font-bold text-primary">About Us</h2>
+          <p className="mb-4 text-lg leading-relaxed">
             At MIST, we empower high school students through engaging
             competitions that fuse educational pursuits with Islamic values. Our
             vibrant community welcomes diverse talents to express themselves,

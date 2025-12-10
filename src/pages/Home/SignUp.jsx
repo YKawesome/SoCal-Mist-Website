@@ -9,22 +9,21 @@ function SignUp() {
   };
 
   return (
-    <section className="py-20 bg-primary relative overflow-hidden">
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
+    <section className="relative py-20 overflow-hidden bg-primary">
+      <div className="container relative z-10 px-6 mx-auto">
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-12">
 
           {/* Form Section */}
           <motion.div 
-            className="lg:w-1/2 w-full max-w-md"
+            className="w-full max-w-md lg:w-1/2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="card bg-base-100 shadow-2xl">
+            <div className="shadow-2xl card bg-base-100">
               <div className="card-body">
-                <h3 className="card-title justify-center text-2xl mb-4">Sign Up</h3>
+                <h3 className="justify-center mb-4 text-2xl card-title">Sign Up</h3>
                 
                 <form 
                   action="https://socalmist.us7.list-manage.com/subscribe/post" 
@@ -35,7 +34,7 @@ function SignUp() {
                   <input type="hidden" name="u" value="caa364fcfc19ab4188741b68e" />
                   <input type="hidden" name="id" value="e85822fca8" />
 
-                  <div className="form-control w-full mb-4">
+                  <div className="w-full mb-4 form-control">
                     <label className="label">
                       <span className="label-text">First Name</span>
                     </label>
@@ -44,11 +43,11 @@ function SignUp() {
                       placeholder="Meraal" 
                       name="MERGE1" 
                       id="MERGE1" 
-                      className="input input-bordered w-full focus:input-primary" 
+                      className="w-full input input-bordered focus:input-primary" 
                     />
                   </div>
 
-                  <div className="form-control w-full mb-4">
+                  <div className="w-full mb-4 form-control">
                     <label className="label">
                       <span className="label-text">Last Name</span>
                     </label>
@@ -57,11 +56,11 @@ function SignUp() {
                       placeholder="Abutaha" 
                       name="MERGE2" 
                       id="MERGE2" 
-                      className="input input-bordered w-full focus:input-primary" 
+                      className="w-full input input-bordered focus:input-primary" 
                     />
                   </div>
 
-                  <div className="form-control w-full mb-6">
+                  <div className="w-full mb-6 form-control">
                     <label className="label">
                       <span className="label-text">Email</span>
                     </label>
@@ -71,11 +70,11 @@ function SignUp() {
                       name="MERGE0" 
                       id="MERGE0" 
                       required
-                      className="input input-bordered w-full focus:input-primary" 
+                      className="w-full input input-bordered focus:input-primary" 
                     />
                   </div>
 
-                  <div className="form-control mt-2">
+                  <div className="mt-2 form-control">
                     <button
                       type="submit"
                       className={`btn btn-primary w-full ${submitted ? "btn-disabled" : ""}`}
@@ -90,14 +89,14 @@ function SignUp() {
 
           {/* Text Section */}
           <motion.div 
-            className="lg:w-1/2 text-center lg:text-left"
+            className="text-center lg:w-1/2 lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-5xl font-bold mb-6 text-neutral">Stay in Touch!</h2>
-            <p className="text-lg text-base-content/80 mb-8">
+            <h2 className="mb-6 text-5xl font-bold text-neutral">Stay in Touch!</h2>
+            <p className="mb-8 text-lg text-base-content/80">
               Subscribe to our newsletter to get the latest updates on registration, 
               competitions, and events. Don't miss out on the excitement!
             </p>

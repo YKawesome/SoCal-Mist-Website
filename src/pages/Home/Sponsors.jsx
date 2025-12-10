@@ -14,9 +14,9 @@ const sponsors = [
 export default function Sponsors() {
   return (
     <section className="py-20 bg-base-100">
-      <div className="container mx-auto px-6 text-center">
+      <div className="container px-6 mx-auto text-center">
         <motion.h2
-          className="text-4xl font-bold mb-12 text-primary"
+          className="mb-12 text-4xl font-bold text-primary"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function Sponsors() {
           Our Partners & Sponsors
         </motion.h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           {sponsors.map((sponsor, index) => (
             <motion.div
               key={index}
@@ -45,7 +45,7 @@ export default function Sponsors() {
               <img
                 src={sponsor.img}
                 alt={sponsor.name}
-                className="w-full h-auto object-contain"
+                className="object-contain w-full h-auto"
               />
             </motion.div>
           ))}
