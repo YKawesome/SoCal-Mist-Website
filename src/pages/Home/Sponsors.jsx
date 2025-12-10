@@ -28,11 +28,19 @@ export default function Sponsors() {
           {sponsors.map((sponsor, index) => (
             <motion.div
               key={index}
-              className="w-40 md:w-52 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 0.7, y: 0 }}
+              className="w-40 md:w-52 grayscale"
+              initial={{ opacity: 0 }}
+              whileInView={{ 
+                opacity: 0.7,
+                transition: { duration: 0.5, delay: index * 0.1 }
+              }}
+              whileHover={{ 
+                opacity: 1, 
+                scale: 1.05,
+                filter: "grayscale(0%)",
+                transition: { duration: 0.3 }
+              }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
             >
               <img
                 src={sponsor.img}

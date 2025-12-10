@@ -4,6 +4,7 @@ import InfiniteCarousel from "./InfiniteCarousel";
 import OurTeam from "./OurTeam";
 import Sponsors from "./Sponsors";
 import JoinUs from "./JoinUs";
+import SignUp from "./SignUp";
 
 function Home() {
     return (
@@ -12,8 +13,9 @@ function Home() {
             <About />
             <InfiniteCarousel />
             <OurTeam />
-            <Sponsors />
             <JoinUs />
+            <SignUp />
+            <Sponsors />
         </>
     );
 }

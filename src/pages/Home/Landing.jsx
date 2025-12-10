@@ -34,7 +34,7 @@ export default function Landing() {
         <div className="max-w-md">
           <motion.img
             src={logo}
-            alt="MIST SoCal"
+            alt="SoCal MIST"
             className="w-64 mx-auto mb-8 drop-shadow-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            MIST SoCal 2025
+            SoCal MIST 2025
           </motion.h1>
           <motion.p
             className="mb-5 text-lg text-gray-200"
