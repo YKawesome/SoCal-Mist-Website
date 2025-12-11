@@ -1,6 +1,7 @@
 import bg from "../../assets/images/background2024.jpg";
 import logo from "../../assets/images/socal-mist-big.png";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import ParallaxHero from "../../components/ParallaxHero/ParallaxHero";
 
 export default function Landing() {
@@ -37,10 +38,17 @@ export default function Landing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <button className="mr-4 btn btn-lg btn-primary">Get Started</button>
-          <button className="text-white btn btn-lg btn-outline btn-secondary">
+          <a 
+            href="https://my.getmistified.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="mr-4 btn btn-lg btn-primary"
+          >
+            Get Started
+          </a>
+          <Link to="/about" className="text-white btn btn-lg btn-outline btn-secondary">
             Learn More
-          </button>
+          </Link>
         </motion.div>
       </div>
     </ParallaxHero>

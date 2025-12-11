@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function OurTeam() {
   return (
-    <section className="flex flex-col py-15 bg-base-100 gap-8">
+    <section className="flex flex-col gap-8 py-15 bg-base-100">
       <div className="container px-6 mx-auto">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2 
@@ -24,7 +25,7 @@ export default function OurTeam() {
           </motion.p>
         </div>
       </div>
-      <button className="block mx-auto btn btn-primary btn-lg">Meet the Team</button>
+      <Link to="/board" className="mx-auto btn btn-primary btn-lg">Meet the Team</Link>
     </section>
   );
 }

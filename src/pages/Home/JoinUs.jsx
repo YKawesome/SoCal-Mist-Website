@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import joinImg from "../../assets/images/joinus.png";
 
 export default function JoinUs() {
@@ -23,12 +24,12 @@ export default function JoinUs() {
             California.
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-            <button className="btn btn-primary btn-lg">
+            <Link to="/judge" className="btn btn-primary btn-lg">
               Become a Judge
-            </button>
-            <button className="btn btn-secondary btn-lg">
+            </Link>
+            <Link to="/volunteer" className="btn btn-secondary btn-lg">
               Volunteer With Us
-            </button>
+            </Link>
           </div>
         </motion.div>
 
