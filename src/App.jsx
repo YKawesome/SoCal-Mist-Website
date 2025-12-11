@@ -7,6 +7,9 @@ import About from "./pages/About/About";
 import Theme from "./pages/Theme/Theme";
 import Competitions from "./pages/Competitions/Competitions";
 import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
+import Judge from "./pages/Judge/Judge";
+import Volunteer from "./pages/Volunteer/Volunteer";
+import Sponsor from "./pages/Sponsor/Sponsor";
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path="/theme" element={<Theme />} />
         <Route path="/competitions" element={<Competitions />} />
         <Route path="/early-submissions" element={<EarlySubmissions />} />
+        <Route path="/judge" element={<Judge />} />
+        <Route path="/volunteer" element={<Volunteer />} />
+        <Route path="/sponsor" element={<Sponsor />} />
       </Routes>
       <Footer />
     </>
