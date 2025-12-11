@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { boardData } from "../../data/BoardData";
+import { boardData } from "../../data/boardData";
 
 // Import all images from the E-Board directory
 const images = import.meta.glob('../../assets/images/E-Board/*.jpeg', { eager: true });
