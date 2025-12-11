@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import BoardData from "./BoardData";
+import { boardData } from "../../data/BoardData";
 
 // Import all images from the E-Board directory
 const images = import.meta.glob('../../assets/images/E-Board/*.jpeg', { eager: true });
@@ -20,7 +20,7 @@ export default function BoardRoster() {
     <div className="min-h-screen py-10 bg-base-100">
       <div className="container px-6 mx-auto">
 
-        {BoardData.map((committee, index) => (
+        {boardData.map((committee, index) => (
           <div key={index} className="mb-20">
             <motion.h2 
               className="pb-4 mb-8 text-3xl font-bold text-center border-b-2 border-base-300"

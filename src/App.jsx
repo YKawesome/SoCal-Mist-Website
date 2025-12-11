@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Board from "./pages/Board/Board";
 import About from "./pages/About/About";
 import Theme from "./pages/Theme/Theme";
+import Competitions from "./pages/Competitions/Competitions";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/board" element={<Board />} />
         <Route path="/about" element={<About />} />
         <Route path="/theme" element={<Theme />} />
+        <Route path="/competitions" element={<Competitions />} />
       </Routes>
       <Footer />
     </>
