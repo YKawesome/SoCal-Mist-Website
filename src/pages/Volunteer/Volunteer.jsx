@@ -1,22 +1,46 @@
-import PageHeader from "../../components/PageHeader/PageHeader";
+import { motion } from "framer-motion";
+import ParallaxHero from "../../components/ParallaxHero/ParallaxHero";
+import volunteerBg from "../../assets/images/communityimage.png";
 
-function Volunteer() {
-    return (
-        <>
-            <PageHeader title="Volunteer" />
-            <div className="justify-items-center bg-[#FCDDAB] p-10">
-                <iframe
-                    title="judge"
-                    style={{ width: "65%" }}
-                    src="https://tinyurl.com/SoCalMIST2025Volunteer"
-                    height="2993"
-                    frameborder="0"
-                    marginheight="0"
-                    marginwidth="0"
-                  ></iframe>
-            </div>
-        </>
-    )
+export default function Volunteer() {
+  return (
+    <div className="min-h-screen bg-base-100">
+      <ParallaxHero backgroundImage={volunteerBg}>
+        <div className="max-w-3xl text-center">
+          <motion.h1 
+            className="mb-5 text-5xl font-bold text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Become a Volunteer
+          </motion.h1>
+          <motion.p 
+            className="mb-5 text-xl font-medium text-gray-100"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Help us inspire the next generation of leaders by volunteering at our competitions.
+          </motion.p>
+        </div>
+      </ParallaxHero>
+
+      <div className="max-w-5xl px-6 py-16 mx-auto">
+        <div className="w-full overflow-hidden shadow-xl bg-base-200 rounded-xl">
+          <iframe 
+            src="https://tinyurl.com/SoCalMIST2025Volunteer" 
+            width="100%" 
+            height="2600" 
+            frameBorder="0" 
+            marginHeight="0" 
+            marginWidth="0"
+            title="Volunteer Registration Form"
+          >
+            Loading…
+          </iframe>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default Volunteer;

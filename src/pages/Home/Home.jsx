@@ -1,27 +1,23 @@
-import AboutUs from "./AboutUs";
-import Front from "./Front";
-import GetInvolved from "./GetInvolved";
-import ImageRowOne from "./ImageRowOne";
-import ImageRowTwo from "./ImageRowTwo";
-import MistTheme from "./MistTheme";
-import OurSponsors from "./OurSponsors";
+import Landing from "./Landing";
+import About from "./About";
+import InfiniteCarousel from "./InfiniteCarousel";
 import OurTeam from "./OurTeam";
+import Sponsors from "./Sponsors";
+import JoinUs from "./JoinUs";
 import SignUp from "./SignUp";
 
 function Home() {
-  return (
-    <>
-      <Front />
-      <AboutUs />
-      <ImageRowOne />
-      <OurTeam />
-      <MistTheme />
-      <GetInvolved />
-      <ImageRowTwo />
-      <OurSponsors />
-      <SignUp />
-    </>
-  );
+    return (
+        <>
+            <Landing />
+            <About />
+            <InfiniteCarousel />
+            <OurTeam />
+            <JoinUs />
+            <SignUp />
+            <Sponsors />
+        </>
+    );
 }
 
 export default Home;

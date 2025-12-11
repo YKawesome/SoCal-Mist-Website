@@ -1,8 +1,0 @@
-.fade-to-black {
-    position: absolute;
-    align-self: flex-start;
-    width: 100%;
-    height: 50%;
-    /* Adjust the height to control the fade effect */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-}

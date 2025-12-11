@@ -1,43 +1,112 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function SignUp() {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     setSubmitted(true);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-base-200 p-8">
-        <div>
-        <h1 className="sm:text-6xl text-5xl font-bold mb-6">Stay in Touch!</h1>
-        </div>
-      <form action="https://socalmist.us7.list-manage.com/subscribe/post" method="POST" onSubmit={handleSubmit}>
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box sm:w-md w-xs border p-4 shadow-lg">
-            <legend className="fieldset-legend">Sign Up!</legend>
+    <section className="relative py-20 overflow-hidden bg-primary">
+      <div className="container relative z-10 px-6 mx-auto">
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-12">
 
-            <input type="hidden" name="u" value="caa364fcfc19ab4188741b68e" />
-            <input type="hidden" name="id" value="e85822fca8" />
+          {/* Form Section */}
+          <motion.div 
+            className="w-full max-w-md lg:w-1/2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="shadow-2xl card bg-base-100">
+              <div className="card-body">
+                <h3 className="justify-center mb-4 text-2xl card-title">Sign Up</h3>
+                
+                <form 
+                  action="https://socalmist.us7.list-manage.com/subscribe/post" 
+                  method="POST" 
+                  onSubmit={handleSubmit}
+                  target="_blank"
+                >
+                  <input type="hidden" name="u" value="caa364fcfc19ab4188741b68e" />
+                  <input type="hidden" name="id" value="e85822fca8" />
 
-            <label className="label">First Name</label>
-            <input type="text" className="input w-full" placeholder="Meraal" name="MERGE1" id="MERGE1" />
-            <label className="label">Last Name</label>
-            <input type="text" className="input w-full" placeholder="Abutaha" name="MERGE2" id="MERGE2" />
-            <label className="label">Email</label>
-            <input type="email" className="input w-full" placeholder="socalmist@gmail.com" name="MERGE0" id="MERGE0" />
+                  <div className="w-full mb-4 form-control">
+                    <label className="label">
+                      <span className="label-text">First Name</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Meraal" 
+                      name="MERGE1" 
+                      id="MERGE1" 
+                      className="w-full input input-bordered focus:input-primary" 
+                    />
+                  </div>
 
-            {/* submit */}
-            <div className="flex justify-center mt-4">
-              <button
-                type="submit"
-                className={`btn btn-md w-full ${submitted ? "btn-disabled" : "btn-primary"}`}
-              >
-                {submitted ? "Thank You!" : "Sign Up"}
-              </button>
+                  <div className="w-full mb-4 form-control">
+                    <label className="label">
+                      <span className="label-text">Last Name</span>
+                    </label>
+                    <input 
+                      type="text" 
+                      placeholder="Abutaha" 
+                      name="MERGE2" 
+                      id="MERGE2" 
+                      className="w-full input input-bordered focus:input-primary" 
+                    />
+                  </div>
+
+                  <div className="w-full mb-6 form-control">
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      placeholder="socalmist@gmail.com" 
+                      name="MERGE0" 
+                      id="MERGE0" 
+                      required
+                      className="w-full input input-bordered focus:input-primary" 
+                    />
+                  </div>
+
+                  <div className="mt-2 form-control">
+                    <button
+                      type="submit"
+                      className={`btn btn-primary w-full ${submitted ? "btn-disabled" : ""}`}
+                    >
+                      {submitted ? "Thank You!" : "Sign Up"}
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-          </fieldset>
-      </form>
-    </div>
+          </motion.div>
+
+          {/* Text Section */}
+          <motion.div 
+            className="text-center lg:w-1/2 lg:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="mb-6 text-5xl font-bold text-neutral">Stay in Touch!</h2>
+            <p className="mb-8 text-lg text-base-content/80">
+              Subscribe to our newsletter to get the latest updates on registration, 
+              competitions, and events. Don't miss out on the excitement!
+            </p>
+          </motion.div>
+
+          
+
+        </div>
+      </div>
+    </section>
   );
 }
 

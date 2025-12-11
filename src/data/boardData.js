@@ -1,4 +1,4 @@
-const BoardData = [
+export const boardData = [
   {
     committee: "Admin",
     members: [
@@ -94,5 +94,3 @@ const BoardData = [
     ],
   },
 ];
-
-export default BoardData;

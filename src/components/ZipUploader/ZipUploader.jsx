@@ -27,57 +27,67 @@ function ZipUploader() {
   };
 
   return (
-    <div className="space-y-4 max-w-md mx-auto px-4">
-      <fieldset className="fieldset">
-        <input
-          type="text"
-          className="input input-bordered w-full mb-2"
-          placeholder="Enter MIST ID"
-          value={mistId}
-          onChange={(e) => setMistId(e.target.value)}
-        />
-        <input
-          type="text"
-          className="input input-bordered w-full mb-2"
-          placeholder="Enter Competition Name"
-          value={competitionName}
-          onChange={(e) => setCompetitionName(e.target.value)}
-        />
-        <label htmlFor="zip-file-input" className="label font-bold mb-1">Upload Submission Files</label>
-        <input
-          id="zip-file-input"
-          type="file"
-          className={`file-input file-input-bordered w-full ${
-            errorMessage ? 'file-input-error' : downloadUrl ? 'file-input-success' : 'file-input-neutral'
-          }`}
-          multiple
-          ref={fileInputRef}
-        />
-        <button onClick={handleZipCreation} className="btn btn-secondary mt-2">
-          Generate ZIP
-        </button>
-      </fieldset>
+    <div className="shadow-xl card bg-base-200">
+      <div className="card-body">
+        <h3 className="mb-4 text-2xl card-title text-primary">Submission Zipper Tool</h3>
+        <p className="mb-4 text-md">Use this tool to bundle your files into a single ZIP file correctly named for myMIST.</p>
+        
+        <fieldset className="w-full fieldset">
+          <label className="fieldset-label">MIST ID</label>
+          <input
+            type="text"
+            className="w-full input"
+            placeholder="e.g. 123-456"
+            value={mistId}
+            onChange={(e) => setMistId(e.target.value)}
+          />
+          
+          <label className="mt-4 fieldset-label">Competition Name</label>
+          <input
+            type="text"
+            className="w-full input"
+            placeholder="e.g. Short Fiction"
+            value={competitionName}
+            onChange={(e) => setCompetitionName(e.target.value)}
+          />
+          
+          <label className="mt-4 fieldset-label">Upload Submission Files</label>
+          <input
+            id="zip-file-input"
+            type="file"
+            className={`file-input w-full ${
+              errorMessage ? 'file-input-error' : downloadUrl ? 'file-input-success' : 'file-input-neutral'
+            }`}
+            multiple
+            ref={fileInputRef}
+          />
+          
+          <button onClick={handleZipCreation} className="w-full mt-6 btn btn-primary">
+            Generate ZIP
+          </button>
+        </fieldset>
 
-      {errorMessage && (
-        <div className="alert alert-error">
-          <span>{errorMessage}</span>
-        </div>
-      )}
+        {errorMessage && (
+          <div role="alert" className="mt-4 alert alert-error">
+            <span>{errorMessage}</span>
+          </div>
+        )}
 
-      {downloadUrl && (
-        <div className="alert alert-success mt-4">
-          <span>
-            ZIP Ready!{" "}
-            <a
-              href={downloadUrl}
-              download={`${mistId.toUpperCase()}_${competitionName.replace(/\s+/g, '').toUpperCase()}.zip`}
-              className="underline font-bold"
-            >
-              Click here to download
-            </a>
-          </span>
-        </div>
-      )}
+        {downloadUrl && (
+          <div role="alert" className="mt-4 alert alert-success">
+            <span>
+              ZIP Ready!{" "}
+              <a
+                href={downloadUrl}
+                download={`${mistId.toUpperCase()}_${competitionName.replace(/\s+/g, '').toUpperCase()}.zip`}
+                className="font-bold underline hover:text-white"
+              >
+                Click here to download
+              </a>
+            </span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,119 +1,249 @@
-import React, { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import images from "../../utils/preloadimages";
-import "./Navbar.css";
-import LargeNav from "./Navs/LargeNav";
-import SmallNav from "./Navs/SmallNav";
+import { motion, AnimatePresence } from "framer-motion";
+import { navigationData } from "../../data/navigation";
+import logo from "../../assets/icons/socal-mist-logo.png";
 
-function Navbar() {
-  const mistLogo = images["socal-mist-logo-white.png"];
-  const instaLogo = images["instagram.svg"];
-  const tiktokLogo = images["tiktok.svg"];
-  const emailLogo = images["email.svg"];
-  const threadsLogo = images["threads.svg"];
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeMobileSubMenu, setActiveMobileSubMenu] = useState(null);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Get all <details> elements
-    const detailsElements = document.querySelectorAll("details");
-
-    // When one dropdown is toggled open, close all others
-    const handleToggle = (e) => {
-      if (e.target.open) {
-        detailsElements.forEach((detail) => {
-          if (detail !== e.target) {
-            detail.removeAttribute("open");
-          }
-        });
-      }
-    };
-
-    detailsElements.forEach((detail) => {
-      detail.addEventListener("toggle", handleToggle);
-    });
-
-    // Close dropdowns if clicking outside of any open dropdown
-    const handleDocumentClick = (event) => {
-      detailsElements.forEach((detail) => {
-        if (detail.open) {
-          detail.removeAttribute("open");
+    let lastY = window.scrollY;
+    
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      
+      // Only update visibility if scroll difference is significant to prevent flickering
+      if (Math.abs(currentY - lastY) > 10) {
+        if (currentY > lastY && currentY > 100) {
+          setIsVisible(false);
+          setActiveMenu(null);
+          setMobileMenuOpen(false);
+          setActiveMobileSubMenu(null);
+        } else {
+          setIsVisible(true);
         }
-      });
+        lastY = currentY;
+      }
+      
+      setScrolled(currentY > 20);
     };
 
-    document.addEventListener("click", handleDocumentClick);
-
-    return () => {
-      detailsElements.forEach((detail) => {
-        detail.removeEventListener("toggle", handleToggle);
-      });
-      document.removeEventListener("click", handleDocumentClick);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Reset mobile submenu state when menu closes
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      setActiveMobileSubMenu(null);
+    }
+  }, [mobileMenuOpen]);
+
   return (
-    <>
-      <div className="navbar bg-neutral text-neutral-content shadow-sm h-20 z-20">
-        <div className="navbar-start">
-          <Link to="/" className="px-3">
-            <div className="w-18">
-              <img src={mistLogo} alt="SoCal MIST Logo" />
-            </div>
-          </Link>
-          {/* <Link className="btn btn-ghost text-xl" to="/">SoCal MIST</Link> */}
-          <div className="hidden lg:flex">
-            <LargeNav />
-          </div>
-        </div>
-
-        <div className="">
-          <div className="gap-2 hidden lg:flex text-neutral-content invert">
-            <a className="btn btn-ghost btn-square" href="https://www.instagram.com/socalmist/" target="_blank">
-              <img className="w-8" src={instaLogo} alt="Instagram Logo" />
-            </a>
-            <a className="btn btn-ghost btn-square">
-              <img className="w-8" src={tiktokLogo} alt="TikTok Logo" />
-            </a>
-            <a className="btn btn-ghost btn-square" href="mailto:socal@getmistified.com" target="_blank">
-              <img className="w-8" src={emailLogo} alt="Instagram Logo" />
-            </a>
-            <a className="btn btn-ghost btn-square" href="https://www.threads.net/@socalmist" target="_blank">
-              <img className="w-8" src={threadsLogo} alt="Threads Logo" />
-            </a>
-
-            
-
-          </div>
-
-          <div className="drawer drawer-end lg:hidden">
-            <input id="mobile-nav-drawer" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content">
-              <label htmlFor="mobile-nav-drawer" className="btn btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 pointer-events-none">
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ 
+          y: isVisible ? 0 : -150,
+          opacity: 1 
+        }}
+        transition={{ duration: 0.3 }}
+        onMouseLeave={() => setActiveMenu(null)}
+        className={`bg-base-100/95 backdrop-blur-md rounded-3xl shadow-lg transition-all duration-300 pointer-events-auto flex flex-col overflow-hidden ${
+          scrolled || mobileMenuOpen ? "w-full max-w-6xl shadow-xl" : "w-full max-w-5xl"
+        }`}
+      >
+        {/* Main Navbar Row */}
+        <div className="navbar px-4 min-h-[4rem]">
+          <div className="navbar-start">
+            {/* Mobile Toggle */}
+            <button 
+              className="btn btn-ghost lg:hidden"
+              onClick={() => {
+                if (mobileMenuOpen) setActiveMobileSubMenu(null);
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
+            >
+              {mobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
-              </label>
-            </div>
-            <div className="drawer-side z-20">
-              <label htmlFor="mobile-nav-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-              <SmallNav />
-            </div>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+            
+            <Link to="/" className="gap-2 text-xl btn btn-ghost hover:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
+              <img src={logo} alt="MIST Logo" className="w-auto h-8" />
+              <span className="hidden font-bold sm:inline">SoCal MIST</span>
+            </Link>
           </div>
-          
+
+          {/* Desktop Menu */}
+          <div className="hidden navbar-center lg:flex">
+            <ul className="gap-1 px-1 menu menu-horizontal">
+              {navigationData.map((item, index) => (
+                <li key={index}>
+                  {item.subMenu ? (
+                    <button
+                      onMouseEnter={() => setActiveMenu(item.name)}
+                      className={`btn border-none bg-base-100/0 hover:bg-primary btn-md transition-colors ${
+                        activeMenu === item.name ? "btn-primary" : ""
+                      }`}
+                    >
+                      {item.name}
+                    </button>
+                  ) : (
+                    item.url.startsWith("http") ? (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium btn btn-ghost btn-sm"
+                        onMouseEnter={() => setActiveMenu(null)}
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      <Link 
+                        to={item.url} 
+                        className="font-medium btn btn-ghost btn-sm"
+                        onMouseEnter={() => setActiveMenu(null)}
+                      >
+                        {item.name}
+                      </Link>
+                    )
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="navbar-end">
+            <a
+              href="https://my.getmistified.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 transition-transform rounded-full shadow-md btn btn-primary btn-md hover:scale-105"
+            >
+              Register
+            </a>
+          </div>
         </div>
-      </div>
-    </>
+
+        {/* Mobile Menu Expansion */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="border-t lg:hidden border-base-200 bg-base-100"
+            >
+              <ul className="w-full gap-2 p-4 menu">
+                {navigationData.map((item, index) => (
+                  <li key={index}>
+                    {item.subMenu ? (
+                      <details open={activeMobileSubMenu === index}>
+                        <summary 
+                          className="text-lg font-bold"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setActiveMobileSubMenu(activeMobileSubMenu === index ? null : index);
+                          }}
+                        >
+                          {item.name}
+                        </summary>
+                        <ul>
+                          {item.subMenu.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              {subItem.url.startsWith("http") ? (
+                                <a href={subItem.url} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                                  {subItem.name}
+                                </a>
+                              ) : (
+                                <Link to={subItem.url} onClick={() => setMobileMenuOpen(false)}>
+                                  {subItem.name}
+                                </Link>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      item.url.startsWith("http") ? (
+                        <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold" onClick={() => setMobileMenuOpen(false)}>
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link to={item.url} className="text-lg font-bold" onClick={() => setMobileMenuOpen(false)}>
+                          {item.name}
+                        </Link>
+                      )
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Desktop Expandable Drawer for Submenus */}
+        <AnimatePresence>
+          {activeMenu && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="hidden overflow-hidden border-t lg:block bg-base-200/50 border-base-content/5"
+            >
+              <div className="flex justify-center p-6">
+                <div className="flex flex-wrap justify-center max-w-3xl gap-4">
+                  {navigationData
+                    .find((item) => item.name === activeMenu)
+                    ?.subMenu.map((subItem, subIndex) => (
+                      <motion.div
+                        key={subIndex}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: subIndex * 0.05 }}
+                      >
+                        {subItem.url.startsWith("http") ? (
+                          <a
+                            href={subItem.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold btn btn-primary btn-ghost btn-xl"
+                            onClick={() => setActiveMenu(null)}
+                          >
+                            {subItem.name}
+                          </a>
+                        ) : (
+                          <Link
+                            to={subItem.url}
+                            className="font-bold btn btn-primary btn-ghost btn-xl"
+                            onClick={() => setActiveMenu(null)}
+                          >
+                            {subItem.name}
+                          </Link>
+                        )}
+                      </motion.div>
+                    ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </div>
   );
 }
-
-export default Navbar;

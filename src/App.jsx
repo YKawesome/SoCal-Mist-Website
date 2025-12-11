@@ -1,79 +1,45 @@
-import { useEffect, useState } from "react";
-import { Sugar } from "react-preloaders";
-import { HashRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import About from "./pages/About/About";
-import Board from "./pages/Board/Board";
-import Competitions from "./pages/Competitions/Competitions";
-import Donate from "./pages/Donate/Donate";
-import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home/Home";
-import Judge from "./pages/Judge/Judge";
-import Registration from "./pages/Registration/Registration";
-import Sponsor from "./pages/Sponsor/Sponsor";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import Board from "./pages/Board/Board";
+import About from "./pages/About/About";
 import Theme from "./pages/Theme/Theme";
+import Competitions from "./pages/Competitions/Competitions";
+import EarlySubmissions from "./pages/EarlySubmissions/EarlySubmissions";
+import Judge from "./pages/Judge/Judge";
 import Volunteer from "./pages/Volunteer/Volunteer";
-import { preloadImages } from "./utils/preloadimages";
-import ScrollToTop from "./utils/scrolltotop";
+import Sponsor from "./pages/Sponsor/Sponsor";
+import PageTransition from "./components/PageTransition/PageTransition";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadImages = async () => {
-      try {
-        await preloadImages();
-      } catch (error) {
-        console.error("Error preloading images:", error);
-      }
-
-      setLoading(false); // Set loading to false after images are preloaded
-    };
-
-    loadImages();
-  }, []);
+  const location = useLocation();
 
   return (
-    <HashRouter>
-
+    <>
       <ScrollToTop />
-
-      <Sugar
-        customLoading={loading}
-        background="var(--color-neutral)"
-        color="var(--color-primary)"
-      />
-
       <Navbar />
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Home />} />
+      <div className="bg-accent">
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+            <Route path="/board" element={<PageTransition><Board /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><About /></PageTransition>} />
+            <Route path="/theme" element={<PageTransition><Theme /></PageTransition>} />
+            <Route path="/competitions" element={<PageTransition><Competitions /></PageTransition>} />
+            <Route path="/early-submissions" element={<PageTransition><EarlySubmissions /></PageTransition>} />
+            <Route path="/judge" element={<PageTransition><Judge /></PageTransition>} />
+            <Route path="/volunteer" element={<PageTransition><Volunteer /></PageTransition>} />
+            <Route path="/sponsor" element={<PageTransition><Sponsor /></PageTransition>} />
 
-        {/* About */}
-        <Route path="/about" element={<About />} />
-        <Route path="/board" element={<Board />} />
-
-        {/* SoCal MIST 2025 */}
-        <Route path="/registration" element={<Registration />} />
-        <Route path="/theme" element={<Theme />} />
-
-        {/* Competitions */}
-        <Route path="/competitions" element={<Competitions />} />
-        <Route path="/early-submissions" element={<EarlySubmissions />} />
-
-        {/* Get Involved */}
-        <Route path="/judge" element={<Judge />} />
-        <Route path="/volunteer" element={<Volunteer />} />
-
-        {/* Donate */}
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/sponsor" element={<Sponsor />} />
-
-      </Routes>
+            <Route path="*" element={<PageTransition><Home /></PageTransition>} />
+          </Routes>
+        </AnimatePresence>
+      </div>
       <Footer />
-    </HashRouter>
+    </>
   );
 }
 
