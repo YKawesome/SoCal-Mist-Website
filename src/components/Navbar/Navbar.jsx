@@ -127,7 +127,7 @@ export default function Navbar() {
                   {item.subMenu ? (
                     <button
                       onMouseEnter={() => setActiveMenu(item.name)}
-                      className={`btn border-none btn-sm font-medium transition-colors ${
+                      className={`btn border-none bg-base-100/0 hover:bg-primary btn-md transition-colors ${
                         activeMenu === item.name ? "btn-primary" : ""
                       }`}
                     >
@@ -164,7 +164,7 @@ export default function Navbar() {
               href="https://my.getmistified.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 rounded-full shadow-md btn btn-primary btn-sm hover:scale-105 transition-transform"
+              className="px-6 rounded-full shadow-md btn btn-primary btn-md hover:scale-105 transition-transform"
             >
               Register
             </a>
@@ -197,7 +197,7 @@ export default function Navbar() {
                             href={subItem.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="h-auto px-6 py-3 text-xl font-bold text-center btn btn-ghost hover:bg-base-100 hover:shadow-sm"
+                            className="font-bold btn btn-primary btn-ghost btn-xl"
                             onClick={() => setActiveMenu(null)}
                           >
                             {subItem.name}
