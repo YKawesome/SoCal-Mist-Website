@@ -48,7 +48,7 @@ const Section = ({ title, children, image, imageAlt, reversed = false }) => {
 
 export default function About() {
   return (
-    <div className="bg-base-100">
+    <div className="overflow-x-hidden bg-base-100">
       <ParallaxHero backgroundImage={aboutBg}>
         <div className="max-w-3xl text-center">
           <motion.h1
