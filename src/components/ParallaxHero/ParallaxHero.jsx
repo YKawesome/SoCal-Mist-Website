@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export default function ParallaxHero({ backgroundImage, children }) {
+export default function ParallaxHero({ backgroundImage, children, dim = true}) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -22,7 +22,7 @@ export default function ParallaxHero({ backgroundImage, children }) {
           className="absolute inset-0 bg-center bg-cover"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className={`absolute inset-0 ${dim ? "bg-black/60" : ""}`} />
       </motion.div>
 
       <motion.div
