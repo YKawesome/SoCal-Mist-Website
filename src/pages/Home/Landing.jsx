@@ -44,7 +44,7 @@ export default function Landing() {
             rel="noopener noreferrer" 
             className="mr-4 btn btn-lg btn-primary"
           >
-            Get Started
+            Register Now
           </a>
           <Link to="/about" className="text-white btn btn-lg btn-outline btn-secondary">
             Learn More

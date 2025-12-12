@@ -12,14 +12,12 @@ import Judge from "./pages/Judge/Judge";
 import Volunteer from "./pages/Volunteer/Volunteer";
 import Sponsor from "./pages/Sponsor/Sponsor";
 import PageTransition from "./components/PageTransition/PageTransition";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   const location = useLocation();
 
   return (
     <>
-      <ScrollToTop />
       <Navbar />
       <div className="bg-accent">
         <AnimatePresence mode="wait">

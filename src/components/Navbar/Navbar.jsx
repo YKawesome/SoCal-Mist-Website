@@ -148,36 +148,54 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="border-t lg:hidden border-base-200 bg-base-100"
             >
-              <ul className="w-full gap-2 p-4 menu">
+              <ul className="w-full gap-2 p-4">
                 {navigationData.map((item, index) => (
                   <li key={index}>
                     {item.subMenu ? (
-                      <details open={activeMobileSubMenu === index}>
-                        <summary 
-                          className="text-lg font-bold"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setActiveMobileSubMenu(activeMobileSubMenu === index ? null : index);
-                          }}
+                      <div className="flex flex-col">
+                        <button 
+                          className="flex items-center justify-between w-full py-2 text-lg font-bold text-left"
+                          onClick={() => setActiveMobileSubMenu(activeMobileSubMenu === index ? null : index)}
                         >
                           {item.name}
-                        </summary>
-                        <ul>
-                          {item.subMenu.map((subItem, subIndex) => (
-                            <li key={subIndex}>
-                              {subItem.url.startsWith("http") ? (
-                                <a href={subItem.url} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
-                                  {subItem.name}
-                                </a>
-                              ) : (
-                                <Link to={subItem.url} onClick={() => setMobileMenuOpen(false)}>
-                                  {subItem.name}
-                                </Link>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </details>
+                          <motion.svg 
+                            animate={{ rotate: activeMobileSubMenu === index ? 180 : 0 }}
+                            className="w-4 h-4" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </motion.svg>
+                        </button>
+                        <AnimatePresence>
+                          {activeMobileSubMenu === index && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <ul className="pl-4 mt-2 menu border-l border-base-300">
+                                {item.subMenu.map((subItem, subIndex) => (
+                                  <li key={subIndex}>
+                                    {subItem.url.startsWith("http") ? (
+                                      <a href={subItem.url} target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+                                        {subItem.name}
+                                      </a>
+                                    ) : (
+                                      <Link to={subItem.url} onClick={() => setMobileMenuOpen(false)}>
+                                        {subItem.name}
+                                      </Link>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
                     ) : (
                       item.url.startsWith("http") ? (
                         <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-lg font-bold" onClick={() => setMobileMenuOpen(false)}>
