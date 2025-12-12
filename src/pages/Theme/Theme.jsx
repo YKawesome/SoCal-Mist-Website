@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import themeImg from "../../assets/images/2025theme.png";
+import themeImg from "../../assets/images/theme.png";
 import ParallaxHero from "../../components/ParallaxHero/ParallaxHero";
 
 export default function Theme() {
@@ -13,37 +13,97 @@ export default function Theme() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="prose prose-lg max-w-none"
+          className="space-y-4 font-medium prose prose-lg max-w-none"
         >
+          <h2 className="text-4xl font-bold text-center text-primary">
+            Currents of Consequence: The Might of Small Deeds
+          </h2>
+          <div className="divider" />
           <p>
-            Islam places a profound emphasis on knowledge, considering it an essential virtue that enriches the mind, nurtures the soul, and allows for personal growth. The Prophet Muhammad (peace and blessings be upon him) said, &quot;Whoever takes a path upon which to obtain knowledge, Allah makes the path to Paradise easy for him.&quot; (<a href="https://sunnah.com/tirmidhi:2646" target="_blank" rel="noopener noreferrer" className="link link-primary">Tirmidhi</a>).
+            The butterfly effect reminds us that the smallest actions, good or
+            bad, can set off vast chains of events. A single word, a habit, or a
+            choice that seems insignificant in the moment can ripple outward,
+            shaping people, communities, and even history. Those ripples may
+            flow gently in streams, or surge forward as floods, their final
+            impact unknown. Yet over time, streams cut valleys, rivers carve
+            canyons, and tides reshape entire coastlines. Do our actions have
+            the same effect?
           </p>
 
           <p>
-            However, before embarking on a path seeking knowledge, scientists and scholars alike must look inward to cultivate humility and sincerity, allowing them to receive knowledge with open hearts and minds, ready to absorb its wisdom and act upon its truths. Muslims often find inspiration from the first Quranic revelation to Prophet Muhammad (peace and blessings be upon him) to always seek God&apos;s guidance while pursuing knowledge: &ldquo;Read! In the name of your Lord who has created (all that exists)&rdquo; (<a href="https://quran.com/en/al-alaq/1" target="_blank" rel="noopener noreferrer" className="link link-primary">Quran 96:1</a>).
+            The immense power of a seemingly small act is illustrated in the
+            story of Prophet Musa (peace be upon him) in{" "}
+            <a
+              href="https://quran.com/al-qasas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary"
+            >
+              Surah al-Qasas
+            </a>
+            . His mother’s decision to trust in God and cast her infant into the
+            Nile became the tide that turned a tyrant. One small ripple set into
+            motion Musa’s upbringing in the Pharaoh&apos;s palace, preparing him
+            to one day stand against oppression with truth and conviction.
           </p>
 
           <p>
-            With the right intentions, the pursuit of spiritual and worldly knowledge paves the way for deeper faith and wisdom. Generations of scholars such as Fatima Al-Fihri, Al Biruni, and Ibn al-Haytham who excelled in mathematics, science, and philosophy, sought knowledge with the conviction that pursuing truth and understanding is an act of devotion to the Creator. These titans contributed positively to the world by passing on what they knew following the example of the Prophet (peace and blessings be upon him) who said, &ldquo;Whoever teaches some knowledge will have the reward of the one who acts upon it, without that detracting from his reward in the slightest&rdquo; (<a href="https://sunnah.com/ibnmajah:240" target="_blank" rel="noopener noreferrer" className="link link-primary">Ibn Majah</a>).
+            Just as one decision can lead to unexpected good, the principle of
+            action and consequence also means that negative acts can result in a
+            cascade of devastating effects. Abu Huraira reported that the
+            Prophet Muhammad (peace and blessings be upon him) said, “Verily,
+            when the servant commits a sin, a black mark appears upon his heart.
+            If he abandons the sin, seeks forgiveness, and repents, then his
+            heart will be polished. If he returns to the sin, the blackness will
+            be increased until it overcomes his heart” (
+            <a
+              href="https://sunnah.com/tirmidhi:3334"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary"
+            >
+              Tirmidhī 3334
+            </a>
+            ). Careless actions, hurtful words, wasted time, and neglected
+            responsibilities can unearth dangerous sinkholes, but repentance
+            offers a path to pull oneself out.
           </p>
 
           <p>
-            Acquiring knowledge comes with a duty to act, by implementing and sharing it responsibly. With time and effort, the spread of knowledge can lead to stronger advocacy in favor of important causes and more efficient or productive systems. This shared knowledge also reinforces collective values, promoting unity and a sense of purpose among those who are committed to the common good. The effort we invest in spreading knowledge thus becomes a crucial part of building stronger, more informed, and more engaged communities, which can be our legacy in the world.
+            In today’s world of instant gratification, small deeds may feel
+            insignificant, and change may feel too slow. But Islam teaches that
+            transformation is built on consistency, patience, and trust in Al
+            Wakeel, the trustee and disposer of affairs.{" "}
+            <a
+              href="https://quran.com/hud"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary"
+            >
+              Surah al-Hud
+            </a>{" "}
+            tells how Prophet Nuh (peace be upon him) built his ark while people
+            mocked him. Although each plank hammered seemed meaningless to
+            others, when devastating floods came, those small steps became
+            salvation for humanity. Every prayer, every act of kindness, every
+            contribution to justice is a drop in an ocean of barakah, blessings
+            that endure and multiply over time.
           </p>
 
-          <div className="p-8 my-8 border-l-4 bg-base-200 rounded-xl border-primary">
-            <h3 className="mt-0 mb-4 text-2xl font-bold">Reflection Questions</h3>
-            <ul className="pl-6 space-y-2 list-disc">
-              <li>How do you seek knowledge, and what is your role in spreading it further?</li>
-              <li>How are your decisions, values and beliefs shaped by what you know?</li>
-              <li>How do you stay motivated to learn despite hitting barriers?</li>
-              <li>What role does humility play in pursuing and teaching knowledge?</li>
-              <li>How do you navigate situations where the knowledge you possess conflicts with your community?</li>
-            </ul>
-          </div>
-
+          <p>
+            The choices you make today may become the tide someone else rides
+            tomorrow. Alternatively, you may be stationed at the center or end
+            of a wave set off by others’ actions. What ripple will you create?
+            How do you ensure your actions contribute to positive growth? How do
+            you take accountability for your role in a chain of events, when the
+            outcome is positive, and when it is negative?
+          </p>
+          <div className="divider" />
           <p className="text-lg font-medium">
-            We encourage you to creatively explore these concepts and more in Regional and National competitions and workshops during MIST 2025. Remember that unique projects displaying creativity and insight will be judged most favorably.
+            We encourage you to creatively explore these concepts and more in
+            Regional and National competitions and workshops during MIST 2026.
+            Remember that unique projects displaying creativity and insight will
+            be judged most favorably.
           </p>
         </motion.div>
       </div>

@@ -22,7 +22,7 @@ export default function Board() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Meet the dedicated individuals leading SoCal MIST 2025.
+            Meet the dedicated individuals leading SoCal MIST 2026.
           </motion.p>
         </div>
       </ParallaxHero>

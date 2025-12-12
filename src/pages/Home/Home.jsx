@@ -1,4 +1,5 @@
 import Landing from "./Landing";
+import Theme from "./Theme";
 import About from "./About";
 import InfiniteCarousel from "./InfiniteCarousel";
 import OurTeam from "./OurTeam";
@@ -14,6 +15,7 @@ function Home() {
             <InfiniteCarousel />
             <OurTeam />
             <JoinUs />
+            <Theme />
             <SignUp />
             <Sponsors />
         </>

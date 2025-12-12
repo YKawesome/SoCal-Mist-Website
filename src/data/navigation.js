@@ -13,7 +13,7 @@ export const navigationData = [
     ],
   },
   {
-    name: "SoCal MIST 2025",
+    name: "SoCal MIST 2026",
     subMenu: [
       // {
       //   name: "Registration",

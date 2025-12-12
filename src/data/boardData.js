@@ -4,10 +4,6 @@ export const boardData = [
     members: [
       {
         role: "Regional Director",
-        name: "Meraal Abutaha",
-      },
-      {
-        role: "Associate Director",
         name: "Rabaa Khan",
       }
     ],
