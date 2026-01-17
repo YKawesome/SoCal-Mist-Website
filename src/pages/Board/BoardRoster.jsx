@@ -36,7 +36,7 @@ export default function BoardRoster() {
               {committee.members.map((member, mIndex) => (
                 <motion.div
                   key={mIndex}
-                  className="transition-shadow duration-300 shadow-xl w-80 card bg-base-200 hover:shadow-2xl"
+                  className="shadow-xl transition-shadow duration-300 w-80 card bg-base-200 hover:shadow-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

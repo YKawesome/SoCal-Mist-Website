@@ -15,13 +15,13 @@ export const navigationData = [
   {
     name: "SoCal MIST 2026",
     subMenu: [
-      // {
-      //   name: "Registration",
-      //   url: "/registration",
-      // },
       {
         name: "Theme",
         url: "/theme",
+      },
+      {
+        name: "Registration",
+        url: "/registration",
       },
       {
         name: "Rulebook",

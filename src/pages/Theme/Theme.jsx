@@ -13,7 +13,7 @@ export default function Theme() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="space-y-4 font-medium prose prose-lg max-w-none"
+          className="font-medium space-y-4 prose prose-lg max-w-none"
         >
           <h2 className="text-4xl font-bold text-center text-primary">
             Currents of Consequence: The Might of Small Deeds

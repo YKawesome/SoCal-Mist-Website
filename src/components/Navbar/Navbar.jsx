@@ -80,7 +80,7 @@ export default function Navbar() {
               )}
             </button>
             
-            <Link to="/" className="gap-2 text-xl btn btn-ghost hover:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/" className="text-xl gap-2 btn btn-ghost hover:bg-transparent" onClick={() => setMobileMenuOpen(false)}>
               <img src={logo} alt="MIST Logo" className="w-auto h-8" />
               <span className="hidden font-bold sm:inline">SoCal MIST</span>
             </Link>
@@ -88,7 +88,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden navbar-center lg:flex">
-            <ul className="gap-1 px-1 menu menu-horizontal">
+            <ul className="px-1 gap-1 menu menu-horizontal">
               {navigationData.map((item, index) => (
                 <li key={index}>
                   {item.subMenu ? (
@@ -131,7 +131,7 @@ export default function Navbar() {
               href="https://my.getmistified.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 transition-transform rounded-full shadow-md btn btn-primary btn-md hover:scale-105"
+              className="px-6 rounded-full shadow-md transition-transform btn btn-primary btn-md hover:scale-105"
             >
               Register
             </a>
@@ -148,7 +148,7 @@ export default function Navbar() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="border-t lg:hidden border-base-200 bg-base-100"
             >
-              <ul className="w-full gap-2 p-4">
+              <ul className="w-full p-4 gap-2">
                 {navigationData.map((item, index) => (
                   <li key={index}>
                     {item.subMenu ? (
@@ -177,7 +177,7 @@ export default function Navbar() {
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden"
                             >
-                              <ul className="pl-4 mt-2 menu border-l border-base-300">
+                              <ul className="pl-4 mt-2 border-l menu border-base-300">
                                 {item.subMenu.map((subItem, subIndex) => (
                                   <li key={subIndex}>
                                     {subItem.url.startsWith("http") ? (

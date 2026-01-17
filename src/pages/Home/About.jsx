@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="py-20 overflow-hidden hero bg-base-200">
-      <div className="flex-col max-w-6xl px-6 mx-auto hero-content lg:flex-row gap-12">
+    <div className="py-20 overflow-hidden hero bg-primary text-primary-content">
+      <div className="flex-col max-w-6xl gap-12 px-6 mx-auto hero-content lg:flex-row">
         <motion.img
           src={aboutImage}
           alt="About MIST SoCal"
@@ -20,7 +20,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h2 className="mb-6 text-5xl font-bold text-primary">About Us</h2>
+          <h2 className="mb-6 text-5xl font-bold text-primary-content">About Us</h2>
           <p className="mb-4 text-lg leading-relaxed">
             At MIST, we empower high school students through engaging
             competitions that fuse educational pursuits with Islamic values. Our

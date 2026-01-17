@@ -5,6 +5,10 @@ export const boardData = [
       {
         role: "Regional Director",
         name: "Rabaa Khan",
+      },
+      {
+        role: "Associate Director",
+        name: "Ali Khaja",
       }
     ],
   },
@@ -19,6 +23,10 @@ export const boardData = [
         role: "Webmaster",
         name: "Yousef Khan",
       },
+      {
+        role: "Social Media Coordinator",
+        name: "Hoda Mustafa",
+      }
     ],
   },
   {
@@ -28,6 +36,10 @@ export const boardData = [
         role: "Chair",
         name: "Samir Yousef",
       },
+      {
+        role: "Volunteer Coordinator",
+        name: "Saif Halari",
+      }
     ],
   },
   {
@@ -38,7 +50,7 @@ export const boardData = [
         name: "Yasmine Ibrahim",
       },
       {
-        role: "Organizer",
+        role: "MIST Chats Coordinator",
         name: "Zoya Rana"
       }
     ],
@@ -60,7 +72,7 @@ export const boardData = [
         name: "Summer Kurdi",
       },
       {
-        role: "Organizer",
+        role: "Category Head",
         name: "Yazan Moubayed",
       },
     ],

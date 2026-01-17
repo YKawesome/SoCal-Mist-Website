@@ -7,7 +7,7 @@ import ParallaxHero from "../../components/ParallaxHero/ParallaxHero";
 export default function Landing() {
   return (
     <ParallaxHero backgroundImage={bg}>
-      <div className="max-w-md">
+      <div className="max-w-md lg:max-w-lg">
         <motion.img
           src={logo}
           alt="SoCal MIST"

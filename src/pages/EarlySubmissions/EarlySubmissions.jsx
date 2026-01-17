@@ -29,7 +29,7 @@ const guidelines = [
 
 export default function EarlySubmissions() {
   return (
-    <div className="bg-base-100 min-h-screen">
+    <div className="min-h-screen bg-base-100">
       <ParallaxHero backgroundImage={bgImage}>
         <div className="max-w-3xl text-center">
           <motion.h1 
@@ -51,7 +51,7 @@ export default function EarlySubmissions() {
         </div>
       </ParallaxHero>
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="px-6 py-16 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column: Competitions List */}
           <motion.div
@@ -60,12 +60,12 @@ export default function EarlySubmissions() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-primary mb-6">Competitions & Requirements</h2>
+            <h2 className="mb-6 text-3xl font-bold text-primary">Competitions & Requirements</h2>
             <div className="space-y-4">
               {earlyComps.map((comp, index) => (
                 <div key={index} className="card bg-base-200 shadow-sm">
-                  <div className="card-body p-4">
-                    <h3 className="font-bold text-lg">{comp.name}</h3>
+                  <div className="p-4 card-body">
+                    <h3 className="text-lg font-bold">{comp.name}</h3>
                     <p className="text-base-content/80">{comp.req}</p>
                   </div>
                 </div>
@@ -82,8 +82,8 @@ export default function EarlySubmissions() {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl font-bold text-primary mb-6">General Guidelines</h2>
-              <ul className="list-disc pl-6 space-y-2 text-lg">
+              <h2 className="mb-6 text-3xl font-bold text-primary">General Guidelines</h2>
+              <ul className="pl-6 text-lg list-disc space-y-2">
                 {guidelines.map((rule, index) => (
                   <li key={index}>{rule}</li>
                 ))}

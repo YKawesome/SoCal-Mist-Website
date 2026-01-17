@@ -39,7 +39,7 @@ const Section = ({ title, children, image, imageAlt, reversed = false }) => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 className="mb-6 text-4xl font-bold text-primary">{title}</h2>
-          <div className="space-y-4 text-lg leading-relaxed">{children}</div>
+          <div className="text-lg leading-relaxed space-y-4">{children}</div>
         </motion.div>
       </div>
     </div>

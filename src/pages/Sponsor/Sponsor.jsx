@@ -28,7 +28,7 @@ export default function Sponsor() {
 
       <div className="max-w-4xl px-6 py-20 mx-auto">
         <motion.div 
-          className="space-y-8 text-center"
+          className="text-center space-y-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

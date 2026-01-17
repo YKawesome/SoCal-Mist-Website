@@ -4,8 +4,8 @@ import joinImg from "../../assets/images/joinus.png";
 
 export default function JoinUs() {
   return (
-    <div className="py-20 overflow-hidden hero bg-base-200">
-      <div className="flex-col max-w-6xl px-6 mx-auto gap-12 hero-content lg:flex-row">
+    <div className="py-20 overflow-hidden hero bg-secondary text-secondary-content">
+      <div className="flex-col max-w-6xl gap-12 px-6 mx-auto hero-content lg:flex-row">
         <motion.div
           className="text-center lg:text-left"
           initial={{ opacity: 0, x: -50 }}
@@ -13,7 +13,7 @@ export default function JoinUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="mb-6 text-5xl font-bold text-primary">
+          <h2 className="mb-6 text-5xl font-bold text-secondary-content">
             Join Our Community
           </h2>
           <p className="mb-8 text-lg leading-relaxed">
@@ -27,7 +27,7 @@ export default function JoinUs() {
             <Link to="/judge" className="btn btn-primary btn-lg">
               Become a Judge
             </Link>
-            <Link to="/volunteer" className="btn btn-secondary btn-lg">
+            <Link to="/volunteer" className="btn btn-neutral btn-outline btn-lg">
               Volunteer With Us
             </Link>
           </div>

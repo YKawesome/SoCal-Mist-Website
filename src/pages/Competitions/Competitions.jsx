@@ -44,14 +44,14 @@ export default function Competitions() {
               {category.competitions.map((comp, compIndex) => (
                 <motion.div
                   key={comp.id}
-                  className="transition-shadow duration-300 shadow-xl card bg-base-200 hover:shadow-2xl"
+                  className="shadow-xl transition-shadow duration-300 card bg-base-200 hover:shadow-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: compIndex * 0.05 }}
                 >
                   <div className="card-body">
-                    <div className="flex items-center gap-4 mb-2">
+                    <div className="flex items-center mb-2 gap-4">
                       <span className="text-4xl">{comp.icon}</span>
                       <h3 className="text-xl card-title">{comp.name}</h3>
                     </div>
