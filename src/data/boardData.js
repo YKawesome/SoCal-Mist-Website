@@ -25,7 +25,7 @@ export const boardData = [
       },
       {
         role: "Social Media Coordinator",
-        name: "Hoda Mustafa",
+        name: "Hoda Mostafa",
       }
     ],
   },
