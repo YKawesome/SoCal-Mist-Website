@@ -46,7 +46,7 @@ export default function BoardRoster() {
                     <img
                       src={getMemberImage(member.name)}
                       alt={member.name}
-                      className="object-cover w-full h-64 rounded-xl"
+                      className="object-cover w-full h-72 rounded-xl"
                     />
                   </figure>
                   <div className="items-center text-center card-body">
