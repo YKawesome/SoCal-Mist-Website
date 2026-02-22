@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import cair from "../../assets/images/cair.png";
 import irusa from "../../assets/images/irusa.png";
 import mpac from "../../assets/images/mpac.png";
 import yss from "../../assets/images/yss.png";
 
 const sponsors = [
-  { name: "CAIR", img: cair },
   { name: "Islamic Relief USA", img: irusa },
   { name: "MPAC", img: mpac },
   { name: "YSS", img: yss },
