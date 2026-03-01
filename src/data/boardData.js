@@ -58,10 +58,14 @@ export const boardData = [
   {
     committee: "Outreach and Registration",
     members: [
-      // {
-      //   role: "Chair",
-      //   name: "Araam Abutaha",
-      // },
+      {
+        role: "Chair",
+        name: "Muneedba Baluch",
+      },
+      {
+        role: "Outreach Coordinator",
+        name: "Inayah Abdulmateen",
+      }
     ],
   },
   {
