@@ -60,7 +60,7 @@ export const boardData = [
     members: [
       {
         role: "Chair",
-        name: "Muneedba Baluch",
+        name: "Muneeba Baluch",
       },
       {
         role: "Outreach Coordinator",
