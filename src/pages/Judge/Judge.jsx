@@ -29,7 +29,7 @@ export default function Judge() {
       <div className="max-w-5xl px-6 py-16 mx-auto">
         <div className="w-full overflow-hidden shadow-xl bg-base-200 rounded-xl">
           <iframe 
-            src="https://tinyurl.com/SoCalMIST2025Judge" 
+            src="https://tinyurl.com/SoCalMIST2026Judge" 
             width="100%" 
             height="2600" 
             frameBorder="0" 
