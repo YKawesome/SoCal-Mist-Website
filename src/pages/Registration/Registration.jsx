@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 const CURRENT_BAND = "early";
 
 const bands = [
-  { id: "early",   label: "Early Registration",   shortLabel: "Early",   dates: "3/18 - 4/5"  },
-  { id: "regular", label: "Regular Registration", shortLabel: "Regular", dates: "4/6 - 4/18"  },
+  { id: "early",   label: "Early Registration",   shortLabel: "Early",   dates: "3/18 - 4/6"  },
+  { id: "regular", label: "Regular Registration", shortLabel: "Regular", dates: "4/7 - 4/18"  },
   { id: "late",    label: "Late Registration",    shortLabel: "Late",    dates: "4/19 - 4/22" },
 ];
 
 const types = [
   { label: "Competitors", prices: { early: "$25", regular: "$45", late: "$60" } },
-  { label: "Guests",      prices: { early: "$25", regular: "$20", late: "$25" } },
+  { label: "Guests",      prices: { early: "$20", regular: "$20", late: "$25" } },
 ];
 
 export default function Registration() {
