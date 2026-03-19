@@ -34,7 +34,7 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            The Tournament of Champions. Join us for a weekend of competition,
+            Join us for a weekend of competition,
             creativity, and community.
           </motion.p>
           <motion.div
