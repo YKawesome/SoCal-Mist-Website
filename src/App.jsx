@@ -13,6 +13,8 @@ import Registration from "./pages/Registration/Registration";
 import Sponsor from "./pages/Sponsor/Sponsor";
 import Theme from "./pages/Theme/Theme";
 import Volunteer from "./pages/Volunteer/Volunteer";
+import PastYears from "./pages/PastYears/PastYears";
+import YearPage from "./pages/PastYears/YearPage";
 
 function App() {
   const location = useLocation();
@@ -33,6 +35,8 @@ function App() {
             <Route path="/judge" element={<PageTransition><Judge /></PageTransition>} />
             <Route path="/volunteer" element={<PageTransition><Volunteer /></PageTransition>} />
             <Route path="/sponsor" element={<PageTransition><Sponsor /></PageTransition>} />
+            <Route path="/years" element={<PageTransition><PastYears /></PageTransition>} />
+            <Route path="/years/:year" element={<PageTransition><YearPage /></PageTransition>} />
             <Route path="*" element={<PageTransition><Home /></PageTransition>} />
           </Routes>
         </AnimatePresence>

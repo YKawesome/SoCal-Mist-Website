@@ -63,19 +63,23 @@ export const navigationData = [
       // },
     ],
   },
-  // {
-  //   name: "Past Years",
-  //   subMenu: [
-  //     {
-  //       name: "2023",
-  //       url: "/years/2023",
-  //     },
-  //     {
-  //       name: "2024",
-  //       url: "/years/2024",
-  //     },
-  //   ],
-  // },
+  {
+    name: "Past Years",
+    subMenu: [
+      {
+        name: "2025",
+        url: "/years/2025",
+      },
+      {
+        name: "2024",
+        url: "/years/2024",
+      },
+      {
+        name: "2023",
+        url: "/years/2023",
+      },
+    ],
+  },
   {
     name: "Donate",
     subMenu: [
