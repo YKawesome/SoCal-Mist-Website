@@ -21,12 +21,20 @@ export default function Landing() {
             transition={{ duration: 0.8 }}
           />
           <motion.h1
-            className="mb-5 text-5xl font-bold text-white"
+            className="mb-2 text-5xl font-bold text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             SoCal MIST 2026
+          </motion.h1>
+          <motion.h1
+            className="mb-5 text-3xl text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            April 25-26
           </motion.h1>
           <motion.p
             className="mb-5 text-lg text-gray-200"

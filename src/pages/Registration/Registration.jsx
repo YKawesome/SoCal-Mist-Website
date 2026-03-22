@@ -34,7 +34,7 @@ export default function Registration() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Learn how to register for SoCal MIST 2026 and get all the details you need to participate.
+            Learn how to register for SoCal MIST 2026 and get all the details you need to participate. Venue details are available on myMIST.
           </motion.p>
         </div>
       </ParallaxHero>
