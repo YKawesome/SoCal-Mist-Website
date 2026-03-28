@@ -34,7 +34,7 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            April 25-26
+            April 25-26 @ USC
           </motion.h1>
           <motion.p
             className="mb-5 text-lg text-gray-200"
