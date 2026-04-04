@@ -6,13 +6,13 @@ const CURRENT_BAND = "early";
 
 const bands = [
   { id: "early",   label: "Early Registration",   shortLabel: "Early",   dates: "3/18 - 4/8"  },
-  { id: "regular", label: "Regular Registration", shortLabel: "Regular", dates: "4/9 - 4/18"  },
+  { id: "general", label: "General Registration", shortLabel: "General", dates: "4/9 - 4/18"  },
   { id: "late",    label: "Late Registration",    shortLabel: "Late",    dates: "4/19 - 4/22" },
 ];
 
 const types = [
-  { label: "Competitors", prices: { early: "$25", regular: "$45", late: "$60" } },
-  { label: "Guests",      prices: { early: "$20", regular: "$20", late: "$25" } },
+  { label: "Competitors", prices: { early: "$25", general: "$45", late: "$60" } },
+  { label: "Guests",      prices: { early: "$20", general: "$20", late: "$25" } },
 ];
 
 export default function Registration() {
