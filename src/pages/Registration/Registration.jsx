@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const CURRENT_BAND = "early";
 
 const bands = [
-  { id: "early",   label: "Early Registration",   shortLabel: "Early",   dates: "3/18 - 4/6"  },
-  { id: "regular", label: "Regular Registration", shortLabel: "Regular", dates: "4/7 - 4/18"  },
+  { id: "early",   label: "Early Registration",   shortLabel: "Early",   dates: "3/18 - 4/8"  },
+  { id: "regular", label: "Regular Registration", shortLabel: "Regular", dates: "4/9 - 4/18"  },
   { id: "late",    label: "Late Registration",    shortLabel: "Late",    dates: "4/19 - 4/22" },
 ];
 
