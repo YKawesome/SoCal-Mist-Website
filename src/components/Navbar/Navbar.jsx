@@ -127,11 +127,20 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-end">
-            <a
+            {/* <a
               href="https://my.getmistified.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 rounded-full shadow-md transition-transform btn btn-primary btn-md hover:scale-105"
+            >
+              Register
+            </a> */}
+            {/* disabled registration button */}
+            <a
+              href="https://my.getmistified.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 rounded-full shadow-md btn btn-primary btn-disabled btn-md"
             >
               Register
             </a>

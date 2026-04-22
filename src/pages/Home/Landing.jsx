@@ -21,45 +21,56 @@ export default function Landing() {
             transition={{ duration: 0.8 }}
           />
           <motion.h1
-            className="mb-2 text-5xl font-bold text-white"
+            className="mb-3 text-5xl font-bold text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             SoCal MIST 2026
           </motion.h1>
-          <motion.h1
-            className="mb-5 text-3xl text-white"
+          <motion.div
+            className="mb-3"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            April 25-26 @ USC
-          </motion.h1>
+            <span className="inline-block bg-error text-white text-sm font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full">
+              Cancelled
+            </span>
+          </motion.div>
           <motion.p
             className="mb-5 text-lg text-gray-200"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Join us for a weekend of competition,
-            creativity, and community.
+            <a
+              href="https://www.instagram.com/socalmist/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:underline"
+            >
+              See why on Instagram →
+            </a>
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <a 
-              href="https://my.getmistified.com" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            {/* <a
+              href="https://my.getmistified.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mr-4 btn btn-lg btn-primary"
             >
               Register Now
-            </a>
-            <Link to="/about" className="text-white btn btn-lg btn-outline btn-secondary">
-              Learn More
+            </a> */}
+            <Link
+              to="/about"
+              className="text-white btn btn-lg btn-outline btn-secondary"
+            >
+              About
             </Link>
           </motion.div>
         </div>
@@ -76,7 +87,11 @@ export default function Landing() {
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110"
         >
-          <img src={instaLogo} alt="Instagram" className="w-7 h-7 brightness-0 invert" />
+          <img
+            src={instaLogo}
+            alt="Instagram"
+            className="w-7 h-7 brightness-0 invert"
+          />
         </a>
         <a
           href="https://www.threads.net/@socalmist"
@@ -84,7 +99,11 @@ export default function Landing() {
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110"
         >
-          <img src={threadsLogo} alt="Threads" className="w-7 h-7 brightness-0 invert" />
+          <img
+            src={threadsLogo}
+            alt="Threads"
+            className="w-7 h-7 brightness-0 invert"
+          />
         </a>
         <a
           href="https://www.tiktok.com/@socal.mist"
@@ -92,7 +111,11 @@ export default function Landing() {
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110"
         >
-          <img src={tiktokLogo} alt="TikTok" className="w-7 h-7 brightness-0 invert" />
+          <img
+            src={tiktokLogo}
+            alt="TikTok"
+            className="w-7 h-7 brightness-0 invert"
+          />
         </a>
       </motion.div>
     </div>

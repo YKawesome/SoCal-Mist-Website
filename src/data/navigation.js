@@ -19,10 +19,10 @@ export const navigationData = [
         name: "Theme",
         url: "/theme",
       },
-      {
-        name: "Registration",
-        url: "/registration",
-      },
+      // {
+      //   name: "Registration",
+      //   url: "/registration",
+      // },
       {
         name: "Rulebook",
         url: "https://www.getmistified.com/news/2026-competitions-rulebook",
